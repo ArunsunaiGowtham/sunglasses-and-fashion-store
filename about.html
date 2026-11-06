@@ -399,12 +399,19 @@
         <a href="shop.html" class="btn-luxury btn-sm mt-3" data-bs-dismiss="offcanvas">Start Shopping</a>
       </div>
       <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+            <!-- Cart Footer -->
       <div id="cartFooter" class="border-top pt-3 mt-auto">
-        <div class="d-flex justify-content-between mb-2">
-          <span class="text-muted">Subtotal</span>
-          <span class="fw-bold fs-5" id="cartSubtotal">$0.00</span>
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="text-muted fw-semibold">Subtotal</span>
+          <span class="fw-bold fs-5 text-main" id="cartSubtotal">$0.00</span>
         </div>
-        <button type="button" class="btn-luxury w-100 mb-2 py-3" id="btnCheckoutDemo">Proceed to Checkout</button>
+        <p class="small text-muted mb-3">Taxes and insured shipping calculated at checkout.</p>
+        <a href="checkout.html" class="btn btn-luxury w-100 mb-2 py-3 text-center d-flex align-items-center justify-content-center fw-bold text-decoration-none" id="btnCheckoutDemo">
+          <i class="bi bi-lock-fill me-2"></i> Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+        <button type="button" class="btn btn-luxury-outline w-100 py-2 small" data-bs-dismiss="offcanvas">
+          Continue Browsing
+        </button>
       </div>
     </div>
   </div>

@@ -403,18 +403,14 @@
 
     const checkoutBtn = document.getElementById("btnCheckoutDemo");
     if (checkoutBtn) {
-      checkoutBtn.addEventListener("click", function () {
+      checkoutBtn.addEventListener("click", function (e) {
         const cart = getCart();
         if (cart.length === 0) {
+          e.preventDefault();
           showToast("Your cart is empty! Browse products to add items.", "warning", "bi-cart-x");
           return;
         }
-        showToast(
-          "Frontend Demo: Secure checkout simulated successfully. Order total: " +
-            document.getElementById("cartSubtotal")?.textContent,
-          "success",
-          "bi-shield-check"
-        );
+        window.location.href = "checkout.html";
       });
     }
   }

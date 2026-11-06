@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Bag | Solaris & Co. Sunglasses & Fashion Store</title>
+  <meta name="description" content="Review your curated bag of luxury eyewear, artisan leather belts, and fashion accessories before secure checkout.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ================= SINGLE UNIFIED NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-eyeglasses"></i>
+        </div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+
+      <!-- Action Controls & Hamburger -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <!-- RTL/LTR Toggle -->
+        <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+          RTL
+        </button>
+        <!-- Wishlist -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Cart -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 p-1 ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse order-lg-2" id="primaryNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1 — Store Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html">Home 2 — Fashion Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <!-- Mobile Controls inside collapsed menu (<576px) -->
+          <li class="nav-item d-sm-none pt-3 mt-2 border-top">
+            <div class="d-flex align-items-center justify-content-center gap-3 px-2">
+              <button type="button" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+                <span class="theme-toggle-label">Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+                RTL
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= PAGE HEADER HERO ================= -->
+  <section class="page-header-hero position-relative">
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-2">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+          <li class="breadcrumb-item active text-white" aria-current="page">Shopping Bag</li>
+        </ol>
+      </nav>
+      <h1 class="display-6 fw-bold text-white mb-2">Your Shopping Bag</h1>
+      <p class="lead text-white-50 mx-auto" style="max-width: 580px;">
+        Review your handcrafted eyewear and curated leather accessories before checkout.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= MAIN CART CONTENT ================= -->
+  <main class="py-5 bg-subtle">
+    <div class="container">
+
+      <!-- EMPTY STATE -->
+      <div id="fullCartEmpty" class="d-none text-center py-5 bg-surface rounded-4 border shadow-sm p-4 p-md-5 my-4">
+        <div class="fs-1 text-muted mb-3"><i class="bi bi-bag-x"></i></div>
+        <h3 class="fw-bold mb-2">Your Shopping Bag is Empty</h3>
+        <p class="text-muted mx-auto mb-4" style="max-width: 480px;">
+          Explore our collection of UV400 sunglasses, Florentine calfskin belts, and artisanal headwear.
+        </p>
+        <a href="shop.html" class="btn btn-luxury px-4 py-3">
+          <i class="bi bi-grid me-2"></i> Browse The Collection
+        </a>
+      </div>
+
+      <!-- ACTIVE CART TABLE & SUMMARY -->
+      <div id="fullCartActive" class="row g-4 g-lg-5">
+        <!-- Left: Cart Items Table -->
+        <div class="col-12 col-lg-8">
+          <div class="card border-0 rounded-4 shadow-sm overflow-hidden mb-4 bg-surface">
+            <div class="table-responsive">
+              <table class="table cart-table mb-0 align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col" style="min-width: 260px;">Product</th>
+                    <th scope="col" class="text-center">Price</th>
+                    <th scope="col" class="text-center" style="width: 140px;">Quantity</th>
+                    <th scope="col" class="text-end">Total</th>
+                    <th scope="col" class="text-center" style="width: 50px;"></th>
+                  </tr>
+                </thead>
+                <tbody id="cartTableBody">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+            <a href="shop.html" class="btn btn-outline-secondary px-4 py-2">
+              <i class="bi bi-arrow-left me-1"></i> Continue Shopping
+            </a>
+            <button type="button" class="btn btn-link text-danger text-decoration-none small" id="btnClearFullCart">
+              <i class="bi bi-trash me-1"></i> Clear Entire Bag
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Order Summary Card -->
+        <div class="col-12 col-lg-4">
+          <div class="checkout-summary-card p-4 rounded-4 position-sticky" style="top: 90px;">
+            <h5 class="fw-bold mb-3 pb-3 border-bottom">Order Summary</h5>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between small text-muted mb-1">
+                <span>Free Express Shipping</span>
+                <span id="fullCartShippingGoal">$150.00 Goal</span>
+              </div>
+              <div class="progress" style="height: 6px;">
+                <div class="progress-bar bg-warning" id="fullCartShippingBar" role="progressbar" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="checkout-calc-row">
+              <span class="checkout-calc-label">Subtotal</span>
+              <span class="checkout-calc-val" id="fullCartSubtotal">$0.00</span>
+            </div>
+            <div class="checkout-calc-row">
+              <span class="checkout-calc-label">Estimated Shipping</span>
+              <span class="checkout-calc-val text-success">Calculated at Checkout</span>
+            </div>
+            <div class="checkout-calc-row">
+              <span class="checkout-calc-label">Sales Tax</span>
+              <span class="checkout-calc-val text-muted">Calculated at Checkout</span>
+            </div>
+            
+            <hr class="my-3">
+
+            <div class="d-flex align-items-baseline justify-content-between mb-4">
+              <span class="fw-bold text-main fs-5">Estimated Total</span>
+              <span class="fs-4 fw-bold text-main" id="fullCartTotal">$0.00</span>
+            </div>
+
+            <a href="checkout.html" class="btn btn-luxury w-100 py-3 fw-bold d-flex align-items-center justify-content-center text-decoration-none shadow-sm" id="btnGoToCheckout">
+              <i class="bi bi-lock-fill me-2"></i> Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+
+            <div class="text-center mt-3 small text-muted">
+              <i class="bi bi-shield-check text-success me-1"></i> 256-Bit SSL Encrypted Checkout
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Common Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-3">
+              <i class="bi bi-eyeglasses"></i>
+            </div>
+            <div class="d-inline-flex flex-column">
+              <span class="brand-title fw-bold" style="letter-spacing: 0.04em; font-size: 1.25rem; line-height: 1.2;">SOLARIS<span class="text-secondary">&</span>CO.</span>
+              <span class="brand-subtitle text-uppercase" style="font-size: 0.62rem; letter-spacing: 0.16em; opacity: 0.75; line-height: 1.2;">LUXURY EYEWEAR & ACCESSORIES</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4 pe-lg-3">
+            Solaris & Co. is a premier purveyor of luxury eyewear, artisan leather belts, contemporary headwear, and curated fashion accessories, dedicated to timeless craftsmanship and bespoke excellence.
+          </p>
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="brands.html">Heritage Brands</a></li>
+            <li><a href="offers.html">Pricing & Offers</a></li>
+            <li><a href="blog.html">Editorial & Guides</a></li>
+            <li><a href="login.html">Client Dashboard</a></li>
+            <li><a href="contact.html">Contact Headquarters</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html">Optical Prescription</a></li>
+            <li><a href="shop.html">Custom Engraving</a></li>
+            <li><a href="shop.html">Leather Embossing</a></li>
+            <li><a href="offers.html">VIP Stylist Booking</a></li>
+            <li><a href="terms-of-care.html">Frame Restoration</a></li>
+            <li><a href="terms-of-care.html">Lifetime Warranty</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Concierge & Boutique Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5>Boutique &amp; Concierge Info</h5>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-geo-alt text-secondary me-2"></i> <span>742 Fifth Avenue, Suite 200, NY 10022</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-telephone text-secondary me-2"></i> <span>+1 (800) 555-7423 (0199)</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-envelope text-secondary me-2"></i> <span>concierge@solaris-accessories.com</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-clock text-secondary me-2"></i> <span>Monday – Friday: 7:00 AM – 8:00 PM</span>
+          </p>
+          <p class="small mb-0 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-calendar-event text-secondary me-2"></i> <span>Saturday: 8:00 AM – 3:00 PM (24/7 Dispatch)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div>
+          © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Cart & Wishlist Modal -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="bi bi-bag me-2 text-secondary"></i> Your Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmptyMsg" class="text-center py-5 d-none">
+        <div class="fs-1 text-muted mb-3"><i class="bi bi-bag-x"></i></div>
+        <h6>Your shopping bag is empty</h6>
+        <p class="text-muted small mb-4">Discover our handcrafted sunglasses, full-grain belts, and caps.</p>
+        <a href="shop.html" class="btn-luxury btn-sm" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+      <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <span class="text-muted fw-semibold">Subtotal</span>
+          <span class="fw-bold fs-5 text-main" id="cartSubtotal">$0.00</span>
+        </div>
+        <p class="small text-muted mb-3">Taxes and insured shipping calculated at checkout.</p>
+        <a href="checkout.html" class="btn btn-luxury w-100 mb-2 py-3 text-center d-flex align-items-center justify-content-center fw-bold text-decoration-none" id="btnCheckoutDemo">
+          <i class="bi bi-lock-fill me-2"></i> Proceed to Checkout <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+        <button type="button" class="btn btn-luxury-outline w-100 py-2 small" data-bs-dismiss="offcanvas">
+          Continue Browsing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold"><i class="bi bi-heart me-2 text-danger"></i> Saved in Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistEmptyMsg" class="text-center py-4 d-none">
+            <h6>No items saved yet</h6>
+          </div>
+          <div id="wishlistItemsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Full Cart Page Handler
+    (function() {
+      function renderFullCart() {
+        const cart = window.getCart ? window.getCart() : [];
+        const emptyEl = document.getElementById('fullCartEmpty');
+        const activeEl = document.getElementById('fullCartActive');
+        const tbody = document.getElementById('cartTableBody');
+        const subtotalEl = document.getElementById('fullCartSubtotal');
+        const totalEl = document.getElementById('fullCartTotal');
+        const shippingBar = document.getElementById('fullCartShippingBar');
+        const shippingGoal = document.getElementById('fullCartShippingGoal');
+
+        if (cart.length === 0) {
+          if (emptyEl) emptyEl.classList.remove('d-none');
+          if (activeEl) activeEl.classList.add('d-none');
+          return;
+        }
+
+        if (emptyEl) emptyEl.classList.add('d-none');
+        if (activeEl) activeEl.classList.remove('d-none');
+
+        let subtotal = 0;
+        let html = '';
+
+        cart.forEach(item => {
+          const lineTotal = item.price * item.quantity;
+          subtotal += lineTotal;
+          html += `
+            <tr>
+              <td>
+                <div class="d-flex align-items-center gap-3">
+                  <div class="checkout-item-thumb">
+                    <img src="${item.image}" alt="${item.name}">
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1"><a href="product-details.html?id=${item.id}" class="text-main">${item.name}</a></h6>
+                    <div class="small text-muted">Color: ${item.color || 'Standard'} • Brand: ${item.brand || 'Solaris'}</div>
+                  </div>
+                </div>
+              </td>
+              <td class="text-center fw-semibold text-main">$${item.price.toFixed(2)}</td>
+              <td class="text-center">
+                <div class="quantity-control mx-auto">
+                  <button type="button" class="quantity-btn" onclick="updateCartQuantity('${item.id}', '${item.color}', -1)">-</button>
+                  <input type="text" class="quantity-input" value="${item.quantity}" readonly>
+                  <button type="button" class="quantity-btn" onclick="updateCartQuantity('${item.id}', '${item.color}', 1)">+</button>
+                </div>
+              </td>
+              <td class="text-end fw-bold text-main">$${lineTotal.toFixed(2)}</td>
+              <td class="text-center">
+                <button type="button" class="btn btn-sm btn-link text-muted p-0" onclick="removeFromCart('${item.id}', '${item.color}')" title="Remove item">
+                  <i class="bi bi-trash fs-6"></i>
+                </button>
+              </td>
+            </tr>
+          `;
+        });
+
+        if (tbody) tbody.innerHTML = html;
+        if (subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+        if (totalEl) totalEl.textContent = `$${subtotal.toFixed(2)}`;
+
+        // Shipping Progress
+        const freeGoal = 150;
+        const pct = Math.min(100, Math.round((subtotal / freeGoal) * 100));
+        if (shippingBar) shippingBar.style.width = pct + '%';
+        if (shippingGoal) {
+          if (subtotal >= freeGoal) {
+            shippingGoal.textContent = 'Unlocked Free Express Courier!';
+            shippingGoal.className = 'text-success fw-bold';
+          } else {
+            shippingGoal.textContent = `$${(freeGoal - subtotal).toFixed(2)} away from Free Express Shipping`;
+          }
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', renderFullCart);
+
+      const clearBtn = document.getElementById('btnClearFullCart');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', function() {
+          if (window.saveCart) {
+            window.saveCart([]);
+            renderFullCart();
+            if (window.showToast) window.showToast('Shopping bag cleared', 'info', 'bi-trash');
+          }
+        });
+      }
+
+      // Re-render when storage or cart changes
+      window.addEventListener('storage', renderFullCart);
+      const originalSaveCart = window.saveCart;
+      if (originalSaveCart) {
+        window.saveCart = function(c) {
+          originalSaveCart(c);
+          renderFullCart();
+        };
+      }
+    })();
+  </script>
+</body>
+</html>
+

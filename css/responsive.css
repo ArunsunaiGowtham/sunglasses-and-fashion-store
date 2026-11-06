@@ -537,6 +537,32 @@ html, body {
     bottom: 16px;
   }
 
+  /* Checkout Responsive Enhancements */
+  .checkout-summary-card {
+    position: static !important;
+    top: auto !important;
+    margin-top: 2rem !important;
+  }
+
+  .checkout-card {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .shipping-option-card {
+    padding: 0.85rem 1rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  .payment-tab-btn {
+    padding: 0.65rem 0.5rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  .cart-table th,
+  .cart-table td {
+    padding: 0.75rem 0.5rem !important;
+  }
+
   .custom-toast {
     min-width: auto;
     width: 100%;
