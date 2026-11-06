@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Atelier Vault Launching Soon | Solaris & Co.</title>
+  <meta name="description" content="Our exclusive limited-edition bespoke eyewear and handcrafted Tuscan leather capsule launches soon. Subscribe for VIP early access.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body class="position-relative min-vh-100 d-flex flex-column text-white" style="background: #090a0c;">
+
+  <!-- Background Image with Dark Vignette Overlay -->
+  <div class="position-absolute inset-0 w-100 h-100" style="z-index: 1;">
+    <img src="images/hero/hero-collection-1.jpg" alt="Atelier Vault Coming Soon" class="w-100 h-100" style="object-fit: cover; opacity: 0.35;">
+    <div class="position-absolute inset-0 w-100 h-100" style="background: radial-gradient(circle, rgba(9,10,12,0.6) 0%, rgba(9,10,12,0.95) 100%);"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="py-4 position-relative" style="z-index: 2;">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand text-white" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-eyeglasses"></i></div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <a href="index.html" class="btn btn-sm btn-luxury-outline text-white border-white">
+          <i class="bi bi-house-door me-1"></i> Return to Main Store
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow-1 d-flex align-items-center py-5 position-relative" style="z-index: 2;">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+          <span class="badge-luxury badge-gold mb-3">Private Atelier Vault</span>
+          <h1 class="display-4 fw-bold mb-3">Something Extraordinary Is In Production</h1>
+          <p class="lead text-light mb-5 mx-auto" style="max-width: 620px;">
+            We are curating a limited series of 50 serialized titanium aviator shades and hand-carved floral tooled saddle belts. Join the guestlist for 2-hour priority reservation.
+          </p>
+
+          <!-- Launch Countdown Timer -->
+          <div class="d-inline-flex align-items-center justify-content-center gap-2 gap-sm-4 p-4 rounded-4 bg-dark bg-opacity-75 border border-secondary border-opacity-25 shadow-lg mb-5">
+            <div class="text-center px-2 px-sm-3">
+              <div class="display-5 fw-bold text-secondary font-monospace" id="csDays">18</div>
+              <div class="small text-uppercase text-white-50">Days</div>
+            </div>
+            <div class="fs-2 text-white-50">:</div>
+            <div class="text-center px-2 px-sm-3">
+              <div class="display-5 fw-bold text-secondary font-monospace" id="csHours">08</div>
+              <div class="small text-uppercase text-white-50">Hours</div>
+            </div>
+            <div class="fs-2 text-white-50">:</div>
+            <div class="text-center px-2 px-sm-3">
+              <div class="display-5 fw-bold text-secondary font-monospace" id="csMinutes">42</div>
+              <div class="small text-uppercase text-white-50">Minutes</div>
+            </div>
+            <div class="fs-2 text-white-50">:</div>
+            <div class="text-center px-2 px-sm-3">
+              <div class="display-5 fw-bold text-secondary font-monospace" id="csSeconds">19</div>
+              <div class="small text-uppercase text-white-50">Seconds</div>
+            </div>
+          </div>
+
+          <!-- VIP Early Access Form -->
+          <div class="mx-auto mb-4" style="max-width: 480px;">
+            <form class="newsletter-form d-flex flex-column flex-sm-row gap-2">
+              <input type="email" class="form-control footer-newsletter-input text-center text-sm-start" placeholder="Enter your email address..." required>
+              <button type="submit" class="btn-gold flex-shrink-0">
+                <span>Request Early Access</span>
+                <i class="bi bi-arrow-right ms-1"></i>
+              </button>
+            </form>
+            <div class="small text-white-50 mt-2">No spam. We will only email you on the morning of launch.</div>
+          </div>
+
+          <!-- Contact Quick Info -->
+          <div class="d-flex flex-wrap justify-content-center gap-4 text-white-50 small mt-4">
+            <span><i class="bi bi-geo-alt text-secondary me-1"></i> 742 Fifth Ave, New York, NY</span>
+            <span><i class="bi bi-telephone text-secondary me-1"></i> +1 (800) 555-7423</span>
+            <span><i class="bi bi-envelope text-secondary me-1"></i> concierge@solaris-accessories.com</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-3 position-relative border-top border-white border-opacity-10 text-center text-white-50 small" style="z-index: 2;">
+    <div class="container">
+      © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let countdown = 18 * 24 * 3600 + 8 * 3600 + 42 * 60 + 19;
+      function tick() {
+        const d = Math.floor(countdown / (24 * 3600));
+        const h = Math.floor((countdown % (24 * 3600)) / 3600);
+        const m = Math.floor((countdown % 3600) / 60);
+        const s = countdown % 60;
+
+        document.getElementById("csDays").textContent = String(d).padStart(2, "0");
+        document.getElementById("csHours").textContent = String(h).padStart(2, "0");
+        document.getElementById("csMinutes").textContent = String(m).padStart(2, "0");
+        document.getElementById("csSeconds").textContent = String(s).padStart(2, "0");
+
+        if (countdown > 0) countdown--;
+      }
+      setInterval(tick, 1000);
+      tick();
+    });
+  </script>
+</body>
+</html>
+

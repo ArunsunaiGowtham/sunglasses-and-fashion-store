@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Patron Account | Solaris & Co. Sunglasses & Fashion Store</title>
+  <meta name="description" content="Register your Solaris & Co. patron profile for private VIP sale access, bespoke eyewear consultations, and complimentary gift packaging.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body class="bg-subtle d-flex flex-column min-vh-100">
+
+  <!-- Minimal Brand Header -->
+  <header class="py-3 bg-surface border-bottom">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-eyeglasses"></i></div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label">Dark</span>
+        </button>
+        <a href="index.html" class="btn btn-sm btn-luxury-outline ms-2">
+          <i class="bi bi-arrow-left me-1"></i> Back to Store
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Register Main Card -->
+  <main class="flex-grow-1 d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-lg-6">
+          <div class="p-4 p-md-5 rounded-4 bg-surface border shadow-lg">
+            <div class="text-center mb-4">
+              <span class="badge-luxury badge-gold mb-2">Solaris Patron Society</span>
+              <h2 class="h3 fw-bold mb-1">Create Your Account</h2>
+              <p class="text-muted small">Unlock an instant 15% VIP discount voucher upon registration.</p>
+            </div>
+
+            <!-- Demo Authentication Notice -->
+            <div class="alert alert-info py-2 px-3 small d-flex align-items-center gap-2 mb-4">
+              <i class="bi bi-info-circle-fill fs-5 text-secondary"></i>
+              <div><strong>Frontend Demo Notice:</strong> Simulated user registration for template evaluation.</div>
+            </div>
+
+            <form id="registerDemoForm" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-12 col-sm-6">
+                  <label for="regFirstName" class="form-label small fw-bold">First Name *</label>
+                  <input type="text" class="form-control" id="regFirstName" placeholder="e.g. Julian" required>
+                  <div class="invalid-feedback small" id="regFirstError"></div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label for="regLastName" class="form-label small fw-bold">Last Name *</label>
+                  <input type="text" class="form-control" id="regLastName" placeholder="e.g. Brooks" required>
+                  <div class="invalid-feedback small" id="regLastError"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="regEmail" class="form-label small fw-bold">Email Address *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-subtle"><i class="bi bi-envelope text-muted"></i></span>
+                  <input type="email" class="form-control" id="regEmail" placeholder="julian@example.com" required>
+                </div>
+                <div class="invalid-feedback small" id="regEmailError"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="regPassword" class="form-label small fw-bold">Password *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-subtle"><i class="bi bi-lock text-muted"></i></span>
+                  <input type="password" class="form-control" id="regPassword" placeholder="Minimum 6 characters" required>
+                  <button class="btn btn-outline-secondary" type="button" id="toggleRegPassword">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback small" id="regPassError"></div>
+              </div>
+
+              <div class="mb-4">
+                <label for="regConfirmPassword" class="form-label small fw-bold">Confirm Password *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-subtle"><i class="bi bi-shield-check text-muted"></i></span>
+                  <input type="password" class="form-control" id="regConfirmPassword" placeholder="Repeat your password" required>
+                </div>
+                <div class="invalid-feedback small" id="regConfirmError"></div>
+              </div>
+
+              <div class="form-check mb-4 small">
+                <input class="form-check-input" type="checkbox" id="agreeTerms" required>
+                <label class="form-check-label text-muted" for="agreeTerms">
+                  I agree to the <a href="javascript:void(0)" class="text-secondary">Terms of Service</a> & <a href="javascript:void(0)" class="text-secondary">Privacy Policy</a>
+                </label>
+                <div class="invalid-feedback small" id="regTermsError">You must agree before submitting.</div>
+              </div>
+
+              <button type="submit" class="btn-luxury w-100 py-3 mb-3">
+                <i class="bi bi-person-check-fill me-1"></i> Complete Registration
+              </button>
+            </form>
+
+            <div class="text-center pt-3 border-top small text-muted">
+              Already have an account?
+              <a href="login.html" class="fw-bold text-secondary ms-1">Sign In Instead</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-3 bg-surface border-top text-center text-muted small">
+    <div class="container">
+      © 2026 Solaris & Co. Sunglasses & Fashion Store. Frontend Template Demo.
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const toggleBtn = document.getElementById("toggleRegPassword");
+      const passInput = document.getElementById("regPassword");
+      if (toggleBtn && passInput) {
+        toggleBtn.addEventListener("click", function() {
+          const isPass = passInput.type === "password";
+          passInput.type = isPass ? "text" : "password";
+          toggleBtn.innerHTML = isPass ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+        });
+      }
+
+      const form = document.getElementById("registerDemoForm");
+      if (form) {
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const first = document.getElementById("regFirstName");
+          const last = document.getElementById("regLastName");
+          const email = document.getElementById("regEmail");
+          const pass = document.getElementById("regPassword");
+          const confirm = document.getElementById("regConfirmPassword");
+          const terms = document.getElementById("agreeTerms");
+
+          let valid = true;
+
+          // Name validation (no numbers)
+          if (!first.value.trim() || /[0-9]/.test(first.value)) {
+            first.classList.add("is-invalid");
+            document.getElementById("regFirstError").textContent = "Valid first name required (no numbers).";
+            valid = false;
+          } else {
+            first.classList.remove("is-invalid");
+            first.classList.add("is-valid");
+          }
+
+          if (!last.value.trim() || /[0-9]/.test(last.value)) {
+            last.classList.add("is-invalid");
+            document.getElementById("regLastError").textContent = "Valid last name required (no numbers).";
+            valid = false;
+          } else {
+            last.classList.remove("is-invalid");
+            last.classList.add("is-valid");
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!email.value.trim() || !emailRegex.test(email.value.trim())) {
+            email.classList.add("is-invalid");
+            document.getElementById("regEmailError").textContent = "Valid email address required.";
+            valid = false;
+          } else {
+            email.classList.remove("is-invalid");
+            email.classList.add("is-valid");
+          }
+
+          // Password validation
+          if (pass.value.length < 6) {
+            pass.classList.add("is-invalid");
+            document.getElementById("regPassError").textContent = "Password must be at least 6 characters.";
+            valid = false;
+          } else {
+            pass.classList.remove("is-invalid");
+            pass.classList.add("is-valid");
+          }
+
+          if (confirm.value !== pass.value || !confirm.value) {
+            confirm.classList.add("is-invalid");
+            document.getElementById("regConfirmError").textContent = "Passwords do not match.";
+            valid = false;
+          } else {
+            confirm.classList.remove("is-invalid");
+            confirm.classList.add("is-valid");
+          }
+
+          if (!terms.checked) {
+            terms.classList.add("is-invalid");
+            valid = false;
+          } else {
+            terms.classList.remove("is-invalid");
+          }
+
+          if (valid) {
+            window.showToast("Account created successfully! Check your email for your 15% VIP discount.", "success", "bi-check-circle-fill");
+            setTimeout(() => {
+              window.location.href = "login.html";
+            }, 1400);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

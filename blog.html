@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Journal & Eyewear Guides | Solaris & Co.</title>
+  <meta name="description"
+    content="Read styling guides, UV400 lens science, full-grain leather care tips, face shape frame recommendations, and runway fashion trends. Single-page comprehensive reader.">
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= SINGLE UNIFIED NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-eyeglasses"></i>
+        </div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+
+      <!-- Action Controls & Hamburger -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <!-- RTL/LTR Toggle (User Reference) -->
+        <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+          RTL
+        </button>
+        <!-- Search Trigger -->
+        <a href="shop.html" class="nav-action-btn" title="Search Products">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Wishlist -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal"
+          title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Cart -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"
+          title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Sign In -->
+        <a href="login.html" class="nav-action-btn d-none d-md-inline-flex" title="Sign In">
+          <i class="bi bi-person"></i>
+        </a>
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 p-1 ms-1" type="button" data-bs-toggle="collapse"
+          data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse order-lg-2" id="primaryNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1 — Store Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html">Home 2 — Fashion Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <!-- Mobile Controls inside collapsed menu (<576px) -->
+          <li class="nav-item d-sm-none pt-3 mt-2 border-top">
+            <div class="d-flex align-items-center justify-content-between px-2">
+              <button type="button" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+                <span class="theme-toggle-label">Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+                RTL
+              </button>
+              <a href="login.html" class="small fw-bold text-secondary">
+                <i class="bi bi-person me-1"></i> Sign In
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Hero Section (Matching Reference media_1793968322992_5a5b8af4.jpg) -->
+  <section class="page-header-hero blog-header-hero" style="background-image: url('images/headers/header-blog.jpg');">
+    <div class="container">
+      <nav aria-label="breadcrumb" class="mb-2">
+        <ol class="breadcrumb justify-content-center mb-0 small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blog & Knowledge Base</li>
+        </ol>
+      </nav>
+      <h1 class="display-5 fw-bold mb-2">Eyewear Knowledge Base & Sartorial Guides</h1>
+      <p class="mb-0">
+        Essential optical protection advice, bespoke leather care checklists, and runway styling guidelines from master stylists.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Blog Section: Floating Filter Pill Card & 3-Column Responsive Grid -->
+  <section class="pb-5 pt-0">
+    <div class="container">
+
+      <!-- ================= CATALOG VIEW (Filter Card + 3-Column Responsive Grid) ================= -->
+      <div id="blogCatalogView">
+        <!-- Floating Filter Card (Matching Reference Format) -->
+        <div class="blog-filter-card mb-4">
+          <!-- Category Pills with Counts -->
+          <div class="blog-pills-wrap" id="blogCategoryPillsWrap">
+            <button type="button" class="btn-blog-pill active" data-blog-category="all">
+              All Articles <span class="pill-count">( 18 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="Sunglasses Trends">
+              Sunglasses Trends <span class="pill-count">( 3 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="Leather Belts & Care">
+              Leather Belts & Care <span class="pill-count">( 3 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="Caps & Headwear">
+              Caps & Headwear <span class="pill-count">( 3 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="Luxury Accessories">
+              Luxury Accessories <span class="pill-count">( 3 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="Face Shape Guides">
+              Face Shape Guides <span class="pill-count">( 3 )</span>
+            </button>
+            <button type="button" class="btn-blog-pill" data-blog-category="UV & Lens Optics">
+              UV & Lens Optics <span class="pill-count">( 3 )</span>
+            </button>
+          </div>
+
+          <!-- Inline Search Box (Matching Reference) -->
+          <div class="blog-search-box">
+            <i class="bi bi-search"></i>
+            <input type="text" class="form-control" id="blogSearchInput"
+              placeholder="Search title, category, keyword...">
+          </div>
+        </div>
+
+        <!-- Articles Count & Authority Credential Subtitle -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 px-1 gap-2">
+          <span class="small text-muted fw-semibold" id="blogArticlesCount">Showing all 18 articles</span>
+          <span class="small text-muted">
+            <i class="bi bi-patch-check-fill text-secondary me-1"></i>Updated Weekly by Master Eyewear Stylists • Atelier Certified
+          </span>
+        </div>
+
+        <!-- Empty State -->
+        <div id="blogEmptyState" class="text-center py-5 d-none">
+          <i class="bi bi-search fs-1 text-muted mb-3"></i>
+          <h5>No matching articles found</h5>
+          <p class="text-muted small">Try searching for other topics like "sunglasses", "belts", "face shape", or "optics".</p>
+          <button type="button" class="btn-luxury btn-sm" id="btnResetBlogSearch">
+            Show All Articles
+          </button>
+        </div>
+
+        <!-- Full-Width Responsive 3-Column Articles Grid (18 Unique Cards) -->
+        <div class="row g-4" id="blogArticlesContainer">
+          <!-- Rendered dynamically by blog.js -->
+        </div>
+      </div>
+
+      <!-- ================= FULL ARTICLE DETAIL VIEW (Matches Reference: 2-Column with Sidebar) ================= -->
+      <div id="blogArticleDetailView" class="d-none pt-2 pb-4">
+        <!-- Hidden hook for dynamic category binding -->
+        <span id="articleBreadcrumbCategory" class="d-none"></span>
+
+        <div class="row g-4 g-lg-5">
+          <!-- LEFT COLUMN: Main Article (Image, Meta Underneath, Title, Rich Body) -->
+          <div class="col-12 col-lg-8">
+            <div class="article-reader-card">
+              <!-- Large Featured Image with Rounded Corners -->
+              <div class="article-featured-img-wrap mb-3 overflow-hidden rounded-4 bg-subtle">
+                <img id="detailArticleImg" src="" alt="Featured Article" class="w-100 d-block article-detail-featured-img">
+              </div>
+
+              <!-- Author / Date / Reading Time Meta Row (Exact match to reference under image) -->
+              <div class="article-meta-row d-flex flex-wrap align-items-center gap-4 text-muted small mb-4 pb-3 border-bottom" id="detailArticleMeta">
+                <!-- Injected dynamically -->
+              </div>
+
+              <!-- Category Badge & Article Title -->
+              <div class="mb-4">
+                <span class="badge-luxury badge-gold mb-2 d-inline-block" id="detailArticleCategory">Category</span>
+                <h1 class="h2 fw-bold text-main" id="detailArticleTitle">Article Title</h1>
+              </div>
+
+              <!-- Rich Text Body -->
+              <div class="article-rich-text text-main lh-lg" id="detailArticleBody">
+                <!-- Full article HTML injected from blog-data.js -->
+              </div>
+
+              <!-- Tags & Social Share -->
+              <div class="mt-4 pt-4 border-top d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <div>
+                  <span class="small fw-bold text-muted me-2">Article Tags:</span>
+                  <span id="detailArticleTags"></span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <span class="small fw-bold text-muted">Share:</span>
+                  <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle"
+                    onclick="window.showToast('Article link copied to clipboard!', 'info', 'bi-link')"><i
+                      class="bi bi-link-45deg"></i></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle"
+                    onclick="window.showToast('Shared to Twitter/X', 'info', 'bi-twitter-x')"><i
+                      class="bi bi-twitter-x"></i></button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary rounded-circle"
+                    onclick="window.showToast('Shared to LinkedIn', 'info', 'bi-linkedin')"><i
+                      class="bi bi-linkedin"></i></button>
+                </div>
+              </div>
+
+              <!-- Collection Highlight CTA Banner -->
+              <div class="mt-4 p-4 rounded-4 bg-subtle border d-flex flex-wrap align-items-center justify-content-between gap-3">
+                <div>
+                  <h6 class="fw-bold mb-1">Looking for Bespoke Eyewear & Leather Accessories?</h6>
+                  <p class="small text-muted mb-0">Explore our curated collections of designer sunglasses, Italian calfskin belts, and headwear.</p>
+                </div>
+                <a href="shop.html" class="btn btn-luxury btn-sm px-3 py-2">
+                  <i class="bi bi-bag me-1"></i> Shop The Collection
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Sidebar (Hotline CTA Card + All 18 Knowledge Guides List) -->
+          <div class="col-12 col-lg-4">
+            <div class="article-sidebar position-sticky" style="top: 100px;">
+              <!-- Widget 1: Hotline / Concierge Card (Reference Match) -->
+              <div class="article-sidebar-cta p-4 rounded-4 mb-4 text-center text-white shadow-sm">
+                <h4 class="fw-bold mb-2 text-white">24/7 Eyewear & Style Concierge?</h4>
+                <p class="small text-white-50 mb-3">
+                  Certified master opticians and leather artisans on standby for private styling consultations.
+                </p>
+                <div class="cta-phone fs-3 fw-bold mb-3">
+                  (800) 555-7423
+                </div>
+                <a href="tel:+18005557423" class="btn btn-danger w-100 py-2 fw-bold rounded-3 cta-hotline-btn">
+                  Call Concierge Hotline
+                </a>
+              </div>
+
+              <!-- Widget 2: All 18 Knowledge Guides List (Reference Match) -->
+              <div class="article-sidebar-guides p-4 rounded-4 bg-surface border shadow-sm">
+                <h5 class="fw-bold text-main mb-3">All 18 Knowledge Guides</h5>
+                <div class="sidebar-guides-list" id="sidebarGuidesList">
+                  <!-- Dynamically populated 18 items with active highlight & right arrow -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+      <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-3">
+              <i class="bi bi-eyeglasses"></i>
+            </div>
+            <div class="d-inline-flex flex-column">
+              <span class="brand-title fw-bold" style="letter-spacing: 0.04em; font-size: 1.25rem; line-height: 1.2;">SOLARIS<span class="text-secondary">&</span>CO.</span>
+              <span class="brand-subtitle text-uppercase" style="font-size: 0.62rem; letter-spacing: 0.16em; opacity: 0.75; line-height: 1.2;">LUXURY EYEWEAR & ACCESSORIES</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4 pe-lg-3">
+            Solaris & Co. is a premier purveyor of luxury eyewear, artisan leather belts, contemporary headwear, and curated fashion accessories, dedicated to timeless craftsmanship and bespoke excellence.
+          </p>
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="brands.html">Heritage Brands</a></li>
+            <li><a href="offers.html">Pricing & Offers</a></li>
+            <li><a href="blog.html">Editorial & Guides</a></li>
+            <li><a href="login.html">Client Dashboard</a></li>
+            <li><a href="contact.html">Contact Headquarters</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=sunglasses">Designer Sunglasses</a></li>
+            <li><a href="shop.html?category=belts">Artisan Leather Belts</a></li>
+            <li><a href="shop.html?category=caps">Contemporary Caps</a></li>
+            <li><a href="shop.html?category=accessories">Luxury Accessories</a></li>
+            <li><a href="shop.html">Bespoke Styling</a></li>
+            <li><a href="blog.html">Leather Care & Repair</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Boutique & Concierge Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5>Boutique & Concierge Info</h5>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-geo-alt text-secondary me-2"></i> <span>742 Fifth Avenue, Suite 200, NY 10022</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-telephone text-secondary me-2"></i> <span>+1 (800) 555-7423 (0199)</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-envelope text-secondary me-2"></i> <span>concierge@solaris-accessories.com</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-clock text-secondary me-2"></i> <span>Monday – Friday: 7:00 AM – 8:00 PM</span>
+          </p>
+          <p class="small mb-0 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-calendar-event text-secondary me-2"></i> <span>Saturday: 8:00 AM – 3:00 PM (24/7 Dispatch)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div>
+          © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Cart & Wishlist Modal -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="bi bi-bag me-2 text-secondary"></i> Your Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmptyMsg" class="text-center py-5 d-none">
+        <i class="bi bi-bag-x fs-1 text-muted mb-3"></i>
+        <h6>Your shopping bag is empty</h6>
+        <a href="shop.html" class="btn-luxury btn-sm mt-3" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+      <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal</span>
+          <span class="fw-bold fs-5" id="cartSubtotal">$0.00</span>
+        </div>
+        <button type="button" class="btn-luxury w-100 mb-2 py-3" id="btnCheckoutDemo">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold"><i class="bi bi-heart me-2 text-danger"></i> Saved in Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistEmptyMsg" class="text-center py-4 d-none">
+            <h6>No items saved yet</h6>
+          </div>
+          <div id="wishlistItemsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/blog-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+
+</html>

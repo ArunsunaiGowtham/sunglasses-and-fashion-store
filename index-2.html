@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solaris & Co. | Fashion Collection 2026 Editorial</title>
+  <meta name="description"
+    content="Explore our seasonal runway collections, Mediterranean eyewear lookbook, hand-tooled Tuscan leather belts, and streetwear headwear.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= SINGLE UNIFIED NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-eyeglasses"></i>
+        </div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+
+      <!-- Action Controls & Hamburger -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <!-- RTL/LTR Toggle (User Reference) -->
+        <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+          RTL
+        </button>
+        <!-- Search Trigger -->
+        <a href="shop.html" class="nav-action-btn" title="Search Products">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Wishlist -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal"
+          title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Cart -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"
+          title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Sign In -->
+        <a href="login.html" class="nav-action-btn d-none d-md-inline-flex" title="Sign In">
+          <i class="bi bi-person"></i>
+        </a>
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 p-1 ms-1" type="button" data-bs-toggle="collapse"
+          data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse order-lg-2" id="primaryNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1 — Store Landing</a></li>
+              <li><a class="dropdown-item active" href="index-2.html">Home 2 — Fashion Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="brands.html">Brands</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="offers.html">Offers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <!-- Mobile Controls inside collapsed menu (<576px) -->
+          <li class="nav-item d-sm-none pt-3 mt-2 border-top">
+            <div class="d-flex align-items-center justify-content-between px-2">
+              <button type="button" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+                <span class="theme-toggle-label">Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+                RTL
+              </button>
+              <a href="login.html" class="small fw-bold text-secondary">
+                <i class="bi bi-person me-1"></i> Sign In
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= EDITORIAL HERO SECTION (DISTINCT FROM HOME 1) ================= -->
+  <section class="hero-editorial">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <!-- Main Hero Card -->
+        <div class="col-12 col-lg-7">
+          <div class="editorial-card" style="height: 520px;">
+            <img src="images/hero/hero-collection-1.jpg" alt="Autumn 2026 Fashion Runway Editorial Collection">
+            <div class="editorial-overlay">
+              <span class="badge-luxury badge-gold mb-2 align-self-start">Runway Capsule 2026</span>
+              <h1 class="display-5 fw-bold text-white mb-2">The Mediterranean Light</h1>
+              <p class="text-light mb-4" style="max-width: 500px;">
+                Where Italian artisanal cellulose acetate meets Riviera sunlight. Hand-finished tortoiseshell frames,
+                crystal-polarized optics, and sculpted gold wire bridges.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="shop.html?category=sunglasses" class="btn-luxury">
+                  <span>Shop Runway Shades</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="shop.html" class="btn-luxury-outline text-white border-white">
+                  <span>View All Collections</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Hero Stack -->
+        <div class="col-12 col-lg-5">
+          <div class="row g-4">
+            <div class="col-12">
+              <div class="editorial-card" style="height: 245px;">
+                <img src="images/hero/hero-collection-2.jpg" alt="Artisan Italian Leather Belts & Wallets">
+                <div class="editorial-overlay">
+                  <span class="badge-luxury badge-dark mb-1 align-self-start">Artisanal Leather</span>
+                  <h3 class="h4 fw-bold text-white mb-1">Tuscan Full-Grain Belts</h3>
+                  <p class="small text-white-50 mb-2">Hand-dyed vachetta hides with solid brass clasps.</p>
+                  <div>
+                    <a href="shop.html?category=belts" class="btn-read-article text-warning">
+                      Shop Leather <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="editorial-card" style="height: 245px;">
+                <img src="images/hero/hero-collection-3.jpg" alt="Contemporary Streetwear Caps and Beanies">
+                <div class="editorial-overlay">
+                  <span class="badge-luxury badge-gold mb-1 align-self-start">Street & Heritage</span>
+                  <h3 class="h4 fw-bold text-white mb-1">Architectural Headwear</h3>
+                  <p class="small text-white-50 mb-2">Washed cotton twill dad hats and merino knit beanies.</p>
+                  <div>
+                    <a href="shop.html?category=caps" class="btn-read-article text-warning">
+                      Shop Headwear <i class="bi bi-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SEASONAL COLLECTION CURATION (DYNAMIC TABS) ================= -->
+  <section class="py-5 my-3">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="badge-luxury badge-gold mb-2">Seasonal Lookbook</span>
+        <h2 class="display-6 fw-bold">The 2026 Collection Highlights</h2>
+        <p class="text-muted mx-auto" style="max-width: 580px;">
+          Filter the season's premier arrivals across optical eyewear, leather goods, and street-ready headwear.
+        </p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+        <button type="button" class="filter-chip active" data-home-tab="all">All Highlights</button>
+        <button type="button" class="filter-chip" data-home-tab="sunglasses">Trending Sunglasses</button>
+        <button type="button" class="filter-chip" data-home-tab="belts">Handcrafted Belts</button>
+        <button type="button" class="filter-chip" data-home-tab="caps">Caps & Headwear</button>
+        <button type="button" class="filter-chip" data-home-tab="accessories">Fine Accessories</button>
+      </div>
+
+      <!-- Product Cards Container -->
+      <div class="row g-4" id="collectionProductsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="shop.html" class="btn-luxury py-3 px-5">
+          <span>Explore Entire Catalog (26 Products)</span>
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DUAL FASHION PROMO BANNERS ================= -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Banner 1: Men's Accessories -->
+        <div class="col-12 col-md-6">
+          <div class="promo-banner" style="min-height: 320px;">
+            <img src="images/banners/promo-2.jpg" alt="Men's Luxury Accessories Promo">
+            <div class="promo-overlay">
+              <span class="badge-luxury badge-dark mb-2 align-self-start">Gentlemen's Sartorial</span>
+              <h3 class="h2 fw-bold mb-2">The Executive Wardrobe</h3>
+              <p class="small text-light mb-4">
+                Reversible Italian leather belts, RFID front-pocket bifolds, and scratch-resistant matte black quartz
+                timepieces.
+              </p>
+              <div>
+                <a href="shop.html?gender=men" class="btn-luxury">
+                  Shop Men's Accessories <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner 2: Women's Luxury Shades & Scarves -->
+        <div class="col-12 col-md-6">
+          <div class="promo-banner" style="min-height: 320px;">
+            <img src="images/banners/promo-3.jpg" alt="Women's High Fashion Sunglasses and Silk Scarves Promo">
+            <div class="promo-overlay">
+              <span class="badge-luxury badge-gold mb-2 align-self-start">High Glamour</span>
+              <h3 class="h2 fw-bold mb-2">The Riviera Siren</h3>
+              <p class="small text-light mb-4">
+                Dramatic cat-eye acetate frames, diamond-beveled rimless tints, and Lake Como mulberry silk & cashmere
+                scarves.
+              </p>
+              <div>
+                <a href="shop.html?gender=women" class="btn-gold">
+                  Shop Women's Collection <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CRAFTSMANSHIP & ATELIER STORYTELLING ================= -->
+  <section class="py-5 my-4">
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-12 col-lg-6">
+          <div class="position-relative">
+            <img src="images/categories/cat-belts.jpg" alt="Tuscan Leather Tanneries" class="rounded-4 shadow-lg w-100"
+              style="max-height: 440px; object-fit: cover;">
+            <div
+              class="position-absolute bottom-0 end-0 bg-primary text-white p-4 rounded-3 m-3 shadow d-none d-sm-block"
+              style="max-width: 260px;">
+              <div class="text-secondary fw-bold fs-2 font-heading">100%</div>
+              <div class="small fw-semibold">Vegetable-Tanned Tuscan Bovine Leather with Hand-Waxed Edges</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <span class="badge-luxury badge-dark mb-2">Uncompromising Standard</span>
+          <h2 class="display-6 fw-bold mb-3">Where Precision Optics Meets Master Leathercraft</h2>
+          <p class="text-muted mb-4">
+            At Solaris & Co., every silhouette is conceived with architectural discipline. We refuse shortcut polymers
+            and cheap bonded leather veneers. Our sunglasses utilize mineral crystal glass and surgical titanium; our
+            belts originate exclusively in multi-generational Florentine tanneries.
+          </p>
+          <div class="row g-3 mb-4">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-secondary fs-5"></i>
+                <span class="fw-bold small">Zero Distortion Optics</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-secondary fs-5"></i>
+                <span class="fw-bold small">Italian Mazzucchelli Acetate</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-secondary fs-5"></i>
+                <span class="fw-bold small">Solid Cast Brass Buckles</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-check-circle-fill text-secondary fs-5"></i>
+                <span class="fw-bold small">Garment-Dyed Cotton Chino</span>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="btn-luxury">
+            <span>Read Our Atelier Story</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BRAND HIGHLIGHTS ================= -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-luxury badge-gold mb-2">The Guild</span>
+        <h2 class="h3 fw-bold">Curated Heritage Labels</h2>
+        <p class="text-muted">Explore items hand-selected from the most esteemed ateliers in fashion history.</p>
+      </div>
+
+      <div class="row g-4" id="home2BrandCards">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NEWSLETTER & CONCIERGE ================= -->
+  <section class="py-5 bg-dark text-white">
+    <div class="container text-center py-4">
+      <span class="badge-luxury badge-gold mb-2">Curated Journal</span>
+      <h2 class="display-6 fw-bold mb-3 text-white">Subscribe to the Lookbook Editorial</h2>
+      <p class="text-white-50 mx-auto mb-4" style="max-width: 520px;">
+        Receive seasonal eyewear lookbooks, leather maintenance guides, and private access to limited atelier drops
+        before public release.
+      </p>
+      <form class="newsletter-form d-flex flex-column flex-sm-row justify-content-center gap-2 mx-auto"
+        style="max-width: 500px;">
+        <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email address..."
+          required aria-label="Email address for lookbook newsletter">
+        <button type="submit" class="btn-gold">
+          <span>Join Society</span>
+          <i class="bi bi-arrow-right ms-1"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+      <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-3">
+              <i class="bi bi-eyeglasses"></i>
+            </div>
+            <div class="d-inline-flex flex-column">
+              <span class="brand-title fw-bold" style="letter-spacing: 0.04em; font-size: 1.25rem; line-height: 1.2;">SOLARIS<span class="text-secondary">&</span>CO.</span>
+              <span class="brand-subtitle text-uppercase" style="font-size: 0.62rem; letter-spacing: 0.16em; opacity: 0.75; line-height: 1.2;">LUXURY EYEWEAR & ACCESSORIES</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4 pe-lg-3">
+            Solaris & Co. is a premier purveyor of luxury eyewear, artisan leather belts, contemporary headwear, and curated fashion accessories, dedicated to timeless craftsmanship and bespoke excellence.
+          </p>
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="brands.html">Heritage Brands</a></li>
+            <li><a href="offers.html">Pricing & Offers</a></li>
+            <li><a href="blog.html">Editorial & Guides</a></li>
+            <li><a href="login.html">Client Dashboard</a></li>
+            <li><a href="contact.html">Contact Headquarters</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=sunglasses">Designer Sunglasses</a></li>
+            <li><a href="shop.html?category=belts">Artisan Leather Belts</a></li>
+            <li><a href="shop.html?category=caps">Contemporary Caps</a></li>
+            <li><a href="shop.html?category=accessories">Luxury Accessories</a></li>
+            <li><a href="shop.html">Bespoke Styling</a></li>
+            <li><a href="blog.html">Leather Care & Repair</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Boutique & Concierge Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5>Boutique & Concierge Info</h5>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-geo-alt text-secondary me-2"></i> <span>742 Fifth Avenue, Suite 200, NY 10022</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-telephone text-secondary me-2"></i> <span>+1 (800) 555-7423 (0199)</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-envelope text-secondary me-2"></i> <span>concierge@solaris-accessories.com</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-clock text-secondary me-2"></i> <span>Monday – Friday: 7:00 AM – 8:00 PM</span>
+          </p>
+          <p class="small mb-0 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-calendar-event text-secondary me-2"></i> <span>Saturday: 8:00 AM – 3:00 PM (24/7 Dispatch)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div>
+          © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= OFFCANVAS CART & WISHLIST & QUICKVIEW ================= -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" id="cartOffcanvasLabel">
+        <i class="bi bi-bag me-2 text-secondary"></i> Your Shopping Bag
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="p-3 mb-3 rounded-3 bg-subtle border">
+        <div id="freeShippingMsg" class="small mb-1 text-muted">
+          Add <strong class="text-secondary">$150.00</strong> more to qualify for <strong>Free Express
+            Shipping</strong>!
+        </div>
+        <div class="free-shipping-bar">
+          <div class="free-shipping-progress" id="freeShippingProgress" style="width: 0%;"></div>
+        </div>
+      </div>
+      <div id="cartEmptyMsg" class="text-center py-5 d-none">
+        <div class="fs-1 text-muted mb-3"><i class="bi bi-bag-x"></i></div>
+        <h6>Your shopping bag is empty</h6>
+        <p class="text-muted small mb-4">Discover our handcrafted sunglasses, full-grain belts, and caps.</p>
+        <a href="shop.html" class="btn-luxury btn-sm" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+      <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal</span>
+          <span class="fw-bold fs-5" id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="small text-muted mb-3">Taxes and free global shipping calculated at checkout.</div>
+        <button type="button" class="btn-luxury w-100 mb-2 py-3" id="btnCheckoutDemo">
+          <i class="bi bi-lock-fill me-1"></i> Proceed to Checkout
+        </button>
+        <button type="button" class="btn-luxury-outline w-100" data-bs-dismiss="offcanvas">
+          Continue Browsing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold">
+            <i class="bi bi-heart me-2 text-danger"></i> Saved in Wishlist
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistEmptyMsg" class="text-center py-4 d-none">
+            <i class="bi bi-heart text-muted fs-1 mb-2"></i>
+            <h6>No items saved yet</h6>
+            <p class="text-muted small">Tap the heart icon on any product to save it here for later.</p>
+          </div>
+          <div id="wishlistItemsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="bg-subtle rounded-3 overflow-hidden p-2 text-center">
+                <img id="quickViewImg" src="" alt="Product Quick View" class="img-fluid rounded-2"
+                  style="max-height: 340px; object-fit: cover;">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <div class="text-secondary small fw-bold text-uppercase mb-1" id="quickViewBrand">Brand</div>
+              <h4 class="fw-bold mb-2" id="quickViewTitle">Product Name</h4>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-4 fw-bold" id="quickViewPrice">$0.00</span>
+                <span class="text-muted text-decoration-line-through small" id="quickViewOldPrice">$0.00</span>
+              </div>
+              <p class="text-muted small mb-3" id="quickViewDesc">Description text here.</p>
+              <div class="mb-3">
+                <div class="small fw-bold mb-2">Select Color:</div>
+                <div id="quickViewColors"></div>
+              </div>
+              <div class="mb-3">
+                <div class="small fw-bold mb-2">Key Specifications:</div>
+                <div class="row g-1" id="quickViewSpecs"></div>
+              </div>
+              <div class="d-flex gap-2 mt-auto pt-3 border-top">
+                <button type="button" class="btn-luxury flex-grow-1" id="quickViewBtnAdd">
+                  <i class="bi bi-bag-plus me-1"></i> Add to Bag
+                </button>
+                <a href="product-details.html" class="btn-luxury-outline" id="quickViewDetailsLink">Full Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/brands-data.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Dynamic Tabbed Grid Rendering
+      const grid = document.getElementById("collectionProductsGrid");
+      const filterChips = document.querySelectorAll("[data-home-tab]");
+
+      function renderCollectionItems(category = "all") {
+        if (!grid || typeof PRODUCTS_DATA === "undefined") return;
+        let items = PRODUCTS_DATA;
+        if (category !== "all") {
+          items = PRODUCTS_DATA.filter(p => p.category === category);
+        }
+        // Take up to 8 diverse products
+        const slice = items.slice(0, 8);
+        let html = "";
+        slice.forEach(p => html += window.createProductCardHTML(p));
+        grid.innerHTML = html;
+      }
+
+      filterChips.forEach(chip => {
+        chip.addEventListener("click", function () {
+          filterChips.forEach(c => c.classList.remove("active"));
+          this.classList.add("active");
+          const cat = this.getAttribute("data-home-tab");
+          renderCollectionItems(cat);
+        });
+      });
+
+      renderCollectionItems("all");
+
+      // 2. Render Brands
+      const brandContainer = document.getElementById("home2BrandCards");
+      if (brandContainer && typeof BRANDS_DATA !== "undefined") {
+        let html = "";
+        BRANDS_DATA.slice(0, 4).forEach(b => {
+          html += `
+            <div class="col-6 col-md-3">
+              <div class="brand-card">
+                <div class="brand-logo-wrap">
+                  <img src="${b.logo}" alt="${b.name}">
+                </div>
+                <h6 class="fw-bold mb-1">${b.name}</h6>
+                <div class="brand-tag mb-2">${b.tagline}</div>
+                <p class="small text-muted mb-3">${b.desc}</p>
+                <a href="${b.link}" class="btn-read-article mx-auto mt-auto">
+                  Explore Brand <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          `;
+        });
+        brandContainer.innerHTML = html;
+      }
+    });
+  </script>
+</body>
+
+</html>

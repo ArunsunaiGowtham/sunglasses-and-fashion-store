@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Catalog | Solaris & Co. — Sunglasses, Belts, Caps & Accessories</title>
+  <meta name="description" content="Explore our complete fashion catalog of UV400 polarized sunglasses, full-grain Italian leather belts, streetwear caps, and designer accessories. Working filters and search.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ================= SINGLE UNIFIED NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-eyeglasses"></i>
+        </div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+
+      <!-- Action Controls & Hamburger -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <!-- RTL/LTR Toggle (User Reference) -->
+        <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+          RTL
+        </button>
+        <!-- Search Trigger -->
+        <a href="shop.html" class="nav-action-btn" title="Search Products">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Wishlist -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Cart -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Sign In -->
+        <a href="login.html" class="nav-action-btn d-none d-md-inline-flex" title="Sign In">
+          <i class="bi bi-person"></i>
+        </a>
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 p-1 ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse order-lg-2" id="primaryNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1 — Store Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html">Home 2 — Fashion Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <!-- Mobile Controls inside collapsed menu (<576px) -->
+          <li class="nav-item d-sm-none pt-3 mt-2 border-top">
+            <div class="d-flex align-items-center justify-content-between px-2">
+              <button type="button" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+                <span class="theme-toggle-label">Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+                RTL
+              </button>
+              <a href="login.html" class="small fw-bold text-secondary">
+                <i class="bi bi-person me-1"></i> Sign In
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Shop Header & Breadcrumbs -->
+  <section class="page-header-hero" style="background-image: url('images/headers/header-shop.jpg');">
+    <div class="container">
+      <span class="badge-luxury badge-gold mb-2">Curated Catalog</span>
+      <h1 class="display-5 fw-bold mb-2">Fashion Accessories Storefront</h1>
+      <p class="mb-3">
+        Explore 26 verified artisan essentials spanning polarized sunglasses, Italian leather belts, streetwear headwear, and lifestyle jewelry.
+      </p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0 small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shop Catalog</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Main Shop Body: Sidebar Filters + Products Grid -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- SIDEBAR FILTERS -->
+        <div class="col-12 col-lg-3">
+          <div class="p-4 rounded-4 bg-surface border shadow-sm shop-sidebar">
+            <div class="d-flex align-items-center justify-content-between pb-3 mb-3 border-bottom">
+              <h5 class="fw-bold mb-0"><i class="bi bi-funnel me-1 text-secondary"></i> Filter Store</h5>
+              <button type="button" class="btn btn-link p-0 small text-decoration-none text-muted" id="btnResetFilters">
+                <i class="bi bi-arrow-counterclockwise"></i> Reset
+              </button>
+            </div>
+
+            <!-- Search Filter -->
+            <div class="mb-4">
+              <label for="shopSearchInput" class="small fw-bold text-uppercase text-muted mb-2">Search Catalog</label>
+              <div class="input-group">
+                <span class="input-group-text bg-subtle border-end-0"><i class="bi bi-search text-muted"></i></span>
+                <input type="text" class="form-control border-start-0" id="shopSearchInput" placeholder="Aviator, Leather, Cap...">
+              </div>
+            </div>
+
+            <!-- Category Filter Links -->
+            <div class="mb-4">
+              <div class="small fw-bold text-uppercase text-muted mb-2">Department</div>
+              <div class="list-group list-group-flush small">
+                <button type="button" class="list-group-item list-group-item-action border-0 px-2 py-2 d-flex justify-content-between align-items-center active" data-filter-category="all">
+                  <span>All Products</span>
+                  <span class="badge bg-secondary-subtle text-secondary rounded-pill">26</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action border-0 px-2 py-2 d-flex justify-content-between align-items-center" data-filter-category="sunglasses">
+                  <span>Sunglasses</span>
+                  <span class="badge bg-secondary-subtle text-secondary rounded-pill">8</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action border-0 px-2 py-2 d-flex justify-content-between align-items-center" data-filter-category="belts">
+                  <span>Belts</span>
+                  <span class="badge bg-secondary-subtle text-secondary rounded-pill">6</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action border-0 px-2 py-2 d-flex justify-content-between align-items-center" data-filter-category="caps">
+                  <span>Caps & Headwear</span>
+                  <span class="badge bg-secondary-subtle text-secondary rounded-pill">6</span>
+                </button>
+                <button type="button" class="list-group-item list-group-item-action border-0 px-2 py-2 d-flex justify-content-between align-items-center" data-filter-category="accessories">
+                  <span>Fashion Accessories</span>
+                  <span class="badge bg-secondary-subtle text-secondary rounded-pill">6</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Price Slider Filter -->
+            <div class="mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <label for="priceRangeInput" class="small fw-bold text-uppercase text-muted mb-0">Max Price</label>
+                <span class="fw-bold text-secondary" id="priceRangeValue">$350</span>
+              </div>
+              <input type="range" class="form-range" id="priceRangeInput" min="30" max="350" step="5" value="350">
+              <div class="d-flex justify-content-between text-muted small">
+                <span>$30</span>
+                <span>$350</span>
+              </div>
+            </div>
+
+            <!-- Brand Filter -->
+            <div class="mb-4">
+              <div class="small fw-bold text-uppercase text-muted mb-2">Heritage Brand</div>
+              <div class="d-flex flex-column gap-1 small">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandAll" value="all" checked>
+                  <label class="form-check-label" for="brandAll">All Brands</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandRayBan" value="Ray-Ban">
+                  <label class="form-check-label" for="brandRayBan">Ray-Ban</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandPersol" value="Persol">
+                  <label class="form-check-label" for="brandPersol">Persol</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandOakley" value="Oakley">
+                  <label class="form-check-label" for="brandOakley">Oakley</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandGucci" value="Gucci">
+                  <label class="form-check-label" for="brandGucci">Gucci</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandTomFord" value="Tom Ford">
+                  <label class="form-check-label" for="brandTomFord">Tom Ford</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandMontblanc" value="Montblanc">
+                  <label class="form-check-label" for="brandMontblanc">Montblanc</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandNewEra" value="New Era">
+                  <label class="form-check-label" for="brandNewEra">New Era</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="brandFilter" id="brandCarrera" value="Carrera">
+                  <label class="form-check-label" for="brandCarrera">Carrera</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Gender Filter -->
+            <div class="mb-2">
+              <div class="small fw-bold text-uppercase text-muted mb-2">Wardrobe Edit</div>
+              <div class="d-flex flex-column gap-1 small">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="genderFilter" id="genderAll" value="all" checked>
+                  <label class="form-check-label" for="genderAll">All Collections</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="genderFilter" id="genderMen" value="men">
+                  <label class="form-check-label" for="genderMen">Men's Edit</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="genderFilter" id="genderWomen" value="women">
+                  <label class="form-check-label" for="genderWomen">Women's Edit</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRODUCTS GRID & CONTROLS -->
+        <div class="col-12 col-lg-9">
+          <!-- Sorting & Result Summary Header -->
+          <div class="d-flex flex-wrap align-items-center justify-content-between p-3 rounded-3 bg-surface border mb-4 shadow-sm gap-3">
+            <div class="small text-muted fw-semibold" id="shopResultCount">
+              Showing 26 of 26 products
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <label for="shopSortSelect" class="small text-muted text-nowrap mb-0">Sort By:</label>
+              <select class="form-select form-select-sm" id="shopSortSelect" style="width: 190px;">
+                <option value="featured" selected>Featured Selection</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="bestseller">Best Selling</option>
+                <option value="newest">Newest Arrivals</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Empty State (Hidden by default) -->
+          <div id="shopEmptyState" class="text-center py-5 d-none">
+            <div class="fs-1 text-muted mb-3"><i class="bi bi-search"></i></div>
+            <h4>No products match your criteria</h4>
+            <p class="text-muted small mb-4">Try widening your price range, clearing search keywords, or selecting another department.</p>
+            <button type="button" class="btn-luxury btn-sm" onclick="document.getElementById('btnResetFilters').click()">
+              Reset All Filters
+            </button>
+          </div>
+
+          <!-- Dynamic Products Container -->
+          <div class="row g-4" id="shopProductsContainer">
+            <!-- Product cards will be injected here via shop.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+      <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-3">
+              <i class="bi bi-eyeglasses"></i>
+            </div>
+            <div class="d-inline-flex flex-column">
+              <span class="brand-title fw-bold" style="letter-spacing: 0.04em; font-size: 1.25rem; line-height: 1.2;">SOLARIS<span class="text-secondary">&</span>CO.</span>
+              <span class="brand-subtitle text-uppercase" style="font-size: 0.62rem; letter-spacing: 0.16em; opacity: 0.75; line-height: 1.2;">LUXURY EYEWEAR & ACCESSORIES</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4 pe-lg-3">
+            Solaris & Co. is a premier purveyor of luxury eyewear, artisan leather belts, contemporary headwear, and curated fashion accessories, dedicated to timeless craftsmanship and bespoke excellence.
+          </p>
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="brands.html">Heritage Brands</a></li>
+            <li><a href="offers.html">Pricing & Offers</a></li>
+            <li><a href="blog.html">Editorial & Guides</a></li>
+            <li><a href="login.html">Client Dashboard</a></li>
+            <li><a href="contact.html">Contact Headquarters</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=sunglasses">Designer Sunglasses</a></li>
+            <li><a href="shop.html?category=belts">Artisan Leather Belts</a></li>
+            <li><a href="shop.html?category=caps">Contemporary Caps</a></li>
+            <li><a href="shop.html?category=accessories">Luxury Accessories</a></li>
+            <li><a href="shop.html">Bespoke Styling</a></li>
+            <li><a href="blog.html">Leather Care & Repair</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Boutique & Concierge Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5>Boutique & Concierge Info</h5>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-geo-alt text-secondary me-2"></i> <span>742 Fifth Avenue, Suite 200, NY 10022</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-telephone text-secondary me-2"></i> <span>+1 (800) 555-7423 (0199)</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-envelope text-secondary me-2"></i> <span>concierge@solaris-accessories.com</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-clock text-secondary me-2"></i> <span>Monday – Friday: 7:00 AM – 8:00 PM</span>
+          </p>
+          <p class="small mb-0 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-calendar-event text-secondary me-2"></i> <span>Saturday: 8:00 AM – 3:00 PM (24/7 Dispatch)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div>
+          © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Cart & Modals -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="bi bi-bag me-2 text-secondary"></i> Your Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmptyMsg" class="text-center py-5 d-none">
+        <i class="bi bi-bag-x fs-1 text-muted mb-3"></i>
+        <h6>Your shopping bag is empty</h6>
+        <a href="shop.html" class="btn-luxury btn-sm mt-3" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+      <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal</span>
+          <span class="fw-bold fs-5" id="cartSubtotal">$0.00</span>
+        </div>
+        <button type="button" class="btn-luxury w-100 mb-2 py-3" id="btnCheckoutDemo">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold"><i class="bi bi-heart me-2 text-danger"></i> Saved in Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistEmptyMsg" class="text-center py-4 d-none"><h6>No items saved yet</h6></div>
+          <div id="wishlistItemsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <div class="bg-subtle rounded-3 overflow-hidden p-2 text-center">
+                <img id="quickViewImg" src="" alt="Product Quick View" class="img-fluid rounded-2" style="max-height: 340px; object-fit: cover;">
+              </div>
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <div class="text-secondary small fw-bold text-uppercase mb-1" id="quickViewBrand">Brand</div>
+              <h4 class="fw-bold mb-2" id="quickViewTitle">Product Name</h4>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-4 fw-bold" id="quickViewPrice">$0.00</span>
+                <span class="text-muted text-decoration-line-through small" id="quickViewOldPrice">$0.00</span>
+              </div>
+              <p class="text-muted small mb-3" id="quickViewDesc">Description text here.</p>
+              <div class="mb-3">
+                <div class="small fw-bold mb-2">Select Color:</div>
+                <div id="quickViewColors"></div>
+              </div>
+              <div class="mb-3">
+                <div class="small fw-bold mb-2">Key Specifications:</div>
+                <div class="row g-1" id="quickViewSpecs"></div>
+              </div>
+              <div class="d-flex gap-2 mt-auto pt-3 border-top">
+                <button type="button" class="btn-luxury flex-grow-1" id="quickViewBtnAdd">
+                  <i class="bi bi-bag-plus me-1"></i> Add to Bag
+                </button>
+                <a href="product-details.html" class="btn-luxury-outline" id="quickViewDetailsLink">Full Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
+

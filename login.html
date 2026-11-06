@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Sign In | Solaris & Co. Sunglasses & Fashion Store</title>
+  <meta name="description" content="Sign in to your Solaris & Co. patron account to track bespoke orders, save wishlist items, and manage shipping addresses.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body class="bg-subtle d-flex flex-column min-vh-100">
+
+  <!-- Minimal Brand Header -->
+  <header class="py-3 bg-surface border-bottom">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box"><i class="bi bi-eyeglasses"></i></div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button type="button" class="theme-toggle-btn" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label">Dark</span>
+        </button>
+        <a href="index.html" class="btn btn-sm btn-luxury-outline ms-2">
+          <i class="bi bi-arrow-left me-1"></i> Back to Store
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Login Main Card -->
+  <main class="flex-grow-1 d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-5">
+          <div class="p-4 p-md-5 rounded-4 bg-surface border shadow-lg">
+            <div class="text-center mb-4">
+              <span class="badge-luxury badge-gold mb-2">Solaris Client Vault</span>
+              <h2 class="h3 fw-bold mb-1">Patron Sign In</h2>
+              <p class="text-muted small">Access your order tracking, custom sizing history, and saved wishlist.</p>
+            </div>
+
+            <!-- Demo Authentication Notice -->
+            <div class="alert alert-info py-2 px-3 small d-flex align-items-center gap-2 mb-4">
+              <i class="bi bi-info-circle-fill fs-5 text-secondary"></i>
+              <div><strong>Frontend Demo Notice:</strong> Simulated account login for template evaluation. Use any valid email and password.</div>
+            </div>
+
+            <form id="loginDemoForm" novalidate>
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label small fw-bold">Email Address *</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-subtle"><i class="bi bi-envelope text-muted"></i></span>
+                  <input type="email" class="form-control" id="loginEmail" placeholder="patron@example.com" required>
+                </div>
+                <div class="invalid-feedback small" id="loginEmailError"></div>
+              </div>
+
+              <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                  <label for="loginPassword" class="form-label small fw-bold">Password *</label>
+                  <a href="javascript:void(0)" onclick="window.showToast('Demo: Password reset instructions simulated.', 'info', 'bi-key')" class="small text-secondary">Forgot?</a>
+                </div>
+                <div class="input-group">
+                  <span class="input-group-text bg-subtle"><i class="bi bi-lock text-muted"></i></span>
+                  <input type="password" class="form-control" id="loginPassword" placeholder="••••••••" required>
+                  <button class="btn btn-outline-secondary" type="button" id="togglePasswordVisibility">
+                    <i class="bi bi-eye"></i>
+                  </button>
+                </div>
+                <div class="invalid-feedback small" id="loginPasswordError"></div>
+              </div>
+
+              <div class="form-check mb-4 small">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label text-muted" for="rememberMe">
+                  Remember this device for 30 days
+                </label>
+              </div>
+
+              <button type="submit" class="btn-luxury w-100 py-3 mb-3">
+                <i class="bi bi-box-arrow-in-right me-1"></i> Sign In to Account
+              </button>
+            </form>
+
+            <div class="text-center pt-3 border-top small text-muted">
+              Don't have a Solaris account yet?
+              <a href="register.html" class="fw-bold text-secondary ms-1">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="py-3 bg-surface border-top text-center text-muted small">
+    <div class="container">
+      © 2026 Solaris & Co. Sunglasses & Fashion Store. Frontend Template Demo.
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Password visibility toggle
+      const toggleBtn = document.getElementById("togglePasswordVisibility");
+      const passInput = document.getElementById("loginPassword");
+      if (toggleBtn && passInput) {
+        toggleBtn.addEventListener("click", function() {
+          const isPass = passInput.type === "password";
+          passInput.type = isPass ? "text" : "password";
+          toggleBtn.innerHTML = isPass ? '<i class="bi bi-eye-slash"></i>' : '<i class="bi bi-eye"></i>';
+        });
+      }
+
+      // Form validation & simulation
+      const form = document.getElementById("loginDemoForm");
+      if (form) {
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const email = document.getElementById("loginEmail");
+          const emailVal = email.value.trim();
+          const pass = document.getElementById("loginPassword");
+          const emailErr = document.getElementById("loginEmailError");
+          const passErr = document.getElementById("loginPasswordError");
+
+          let valid = true;
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (!emailVal || !emailRegex.test(emailVal)) {
+            email.classList.add("is-invalid");
+            emailErr.textContent = "Please provide a valid email format.";
+            emailErr.style.display = "block";
+            valid = false;
+          } else {
+            email.classList.remove("is-invalid");
+            email.classList.add("is-valid");
+            emailErr.style.display = "none";
+          }
+
+          if (pass.value.length < 6) {
+            pass.classList.add("is-invalid");
+            passErr.textContent = "Password must be at least 6 characters.";
+            passErr.style.display = "block";
+            valid = false;
+          } else {
+            pass.classList.remove("is-invalid");
+            pass.classList.add("is-valid");
+            passErr.style.display = "none";
+          }
+
+          if (valid) {
+            window.showToast("Welcome back! Simulated login successful (Demo).", "success", "bi-check-circle-fill");
+            setTimeout(() => {
+              window.location.href = "index.html";
+            }, 1200);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+

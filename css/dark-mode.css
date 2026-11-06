@@ -1,0 +1,685 @@
+/* ==========================================================================
+   SUNGLASSES & FASHION ACCESSORIES STORE - DARK MODE STYLESHEET
+   Project 26 - Theme Support
+   ========================================================================== */
+
+[data-theme="dark"],
+[data-bs-theme="dark"] {
+  --primary: #f8fafc;
+  --primary-hover: #e2e8f0;
+  --secondary: #e5c158;
+  --secondary-hover: #f3cf65;
+  --secondary-light: #262115;
+  --accent: #f59e0b;
+  --accent-light: #362208;
+  
+  --bg-body: #0d0e11;
+  --bg-surface: #15171c;
+  --bg-subtle: #1e2027;
+  --text-main: #f1f3f7;
+  --text-muted: #9ba3af;
+  --text-light: #64748b;
+  --border-color: #272a34;
+  --border-light: #1f222b;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+
+  /* Bootstrap 5 Variable Overrides: Eliminates blue links & dark breadcrumb dividers */
+  --bs-link-color: var(--secondary);
+  --bs-link-hover-color: #ffffff;
+  --bs-link-color-rgb: 229, 193, 88;
+  --bs-link-hover-color-rgb: 255, 255, 255;
+  --bs-body-color: var(--text-main);
+  --bs-body-bg: var(--bg-body);
+  --bs-border-color: var(--border-color);
+  --bs-breadcrumb-divider-color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .site-navbar {
+  background-color: rgba(21, 23, 28, 0.95);
+  border-bottom-color: var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+[data-theme="dark"] .brand-icon-box {
+  background: var(--secondary);
+  color: #0b0c0e;
+}
+
+[data-theme="dark"] .btn-luxury {
+  background-color: var(--secondary);
+  color: #0d0e11;
+  border-color: var(--secondary);
+}
+
+[data-theme="dark"] .btn-luxury:hover {
+  background-color: #ffffff;
+  color: #0d0e11;
+  border-color: #ffffff;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
+}
+
+[data-theme="dark"] .btn-luxury-outline {
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .btn-luxury-outline:hover {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: #0d0e11;
+}
+
+[data-theme="dark"] .btn-add-cart-sm {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .btn-add-cart-sm:hover {
+  background: var(--secondary);
+  color: #0d0e11;
+  border-color: var(--secondary);
+}
+
+[data-theme="dark"] .product-card {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-card:hover {
+  border-color: var(--secondary);
+}
+
+[data-theme="dark"] .action-btn-pill {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .brand-card {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .brand-logo-wrap {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .brand-tag {
+  background: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .blog-card {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .offer-card {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .offer-header {
+  background: var(--bg-subtle);
+}
+
+[data-theme="dark"] .coupon-code {
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .dropdown-menu,
+[data-theme="dark"] .modal-content,
+[data-theme="dark"] .offcanvas {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .dropdown-item:hover,
+[data-theme="dark"] .dropdown-item.active {
+  background-color: var(--bg-subtle);
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: #242730;
+  border-color: var(--secondary);
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(229, 193, 88, 0.2);
+}
+
+[data-theme="dark"] .quantity-control {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .product-specs-table th {
+  background: var(--bg-subtle);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .table {
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .nav-tabs .nav-link {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .nav-tabs .nav-link.active {
+  background-color: var(--bg-surface);
+  color: var(--secondary);
+  border-color: var(--border-color) var(--border-color) var(--bg-surface);
+}
+
+[data-theme="dark"] .accordion-item {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .accordion-button {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: var(--bg-subtle);
+  color: var(--secondary);
+}
+
+[data-theme="dark"] .accordion-button::after {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .features-strip {
+  background: var(--bg-surface);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .filter-chip {
+  background: var(--bg-subtle);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+
+[data-theme="dark"] .filter-chip.active {
+  background: var(--secondary);
+  color: #0d0e11;
+  border-color: var(--secondary);
+}
+
+[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* ==========================================================================
+   FOOTER IN DARK MODE (100% CONTRAST & LEGIBILITY)
+   ========================================================================== */
+
+[data-theme="dark"] .site-footer {
+  background-color: #08090b !important;
+  border-top-color: #232732 !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .site-footer .navbar-brand,
+[data-theme="dark"] .site-footer .navbar-brand span {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .site-footer .brand-icon-box {
+  background: rgba(229, 193, 88, 0.25) !important;
+  border-color: rgba(229, 193, 88, 0.5) !important;
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .site-footer p,
+[data-theme="dark"] .site-footer .text-muted,
+[data-theme="dark"] .site-footer .footer-links a {
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================================================
+   GLOBAL HIGH-CONTRAST DARK MODE TEXT & SURFACES
+   ========================================================================== */
+
+[data-theme="dark"] .bg-surface {
+  background-color: #15171c !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .bg-subtle {
+  background-color: #1e2027 !important;
+}
+
+/* 100% WCAG AAA Legibility for all text-muted elements */
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] p.text-muted,
+[data-theme="dark"] span.text-muted,
+[data-theme="dark"] div.text-muted,
+[data-theme="dark"] .small.text-muted,
+[data-theme="dark"] .text-secondary {
+  color: #cbd5e1 !important; /* Crisp, luminous soft silver-white */
+}
+
+[data-theme="dark"] .border,
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .border-end {
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .border-light {
+  border-color: #22252f !important;
+}
+
+/* Badges in Dark Mode */
+[data-theme="dark"] .badge-dark {
+  background-color: #272a34 !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+[data-theme="dark"] .badge-gold {
+  background-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .badge-discount {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   CONTACT PAGE CONTRAST & VISIBILITY (DARK MODE)
+   ========================================================================== */
+
+[data-theme="dark"] .form-label {
+  color: #f1f3f7 !important;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] textarea.form-control {
+  background-color: #1a1d24 !important;
+  border: 1px solid #333846 !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] textarea.form-control:focus {
+  background-color: #20242d !important;
+  border-color: var(--secondary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(229, 193, 88, 0.25) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder,
+[data-theme="dark"] .form-select::placeholder,
+[data-theme="dark"] textarea.form-control::placeholder {
+  color: #94a3b8 !important;
+  opacity: 1 !important;
+}
+
+[data-theme="dark"] .feature-icon {
+  background: rgba(229, 193, 88, 0.15) !important;
+  color: var(--secondary) !important;
+  border: 1px solid rgba(229, 193, 88, 0.35) !important;
+}
+
+[data-theme="dark"] .social-icon-btn.bg-dark {
+  background-color: #272a34 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #f1f3f7 !important;
+}
+
+[data-theme="dark"] .social-icon-btn.bg-dark:hover {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+}
+
+/* ==========================================================================
+   OFFERS PAGE CONTRAST & VISIBILITY (DARK MODE)
+   ========================================================================== */
+
+[data-theme="dark"] .offer-coupon-box {
+  background-color: #1c1f26 !important;
+  border: 1.5px dashed var(--secondary) !important;
+}
+
+[data-theme="dark"] .coupon-code {
+  color: var(--secondary) !important;
+  letter-spacing: 0.1em;
+}
+
+[data-theme="dark"] .offer-coupon-box .btn-dark,
+[data-theme="dark"] .btn-coupon-copy {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .offer-coupon-box .btn-dark:hover,
+[data-theme="dark"] .btn-coupon-copy:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #0d0e11 !important;
+}
+
+[data-theme="dark"] .offer-card {
+  background-color: #15171c !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .offer-header {
+  background-color: #1a1d24 !important;
+  border-bottom-color: #272a34 !important;
+}
+
+[data-theme="dark"] .offer-header .text-main,
+[data-theme="dark"] .offer-header .display-6 {
+  color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   BLOG PAGE CONTRAST & VISIBILITY (DARK MODE)
+   ========================================================================== */
+
+[data-theme="dark"] .blog-card {
+  background-color: #15171c !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .blog-card-category {
+  background-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .blog-title a {
+  color: #f1f3f7 !important;
+}
+
+[data-theme="dark"] .blog-title a:hover {
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .blog-excerpt {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .blog-meta {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .blog-author-name {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .btn-read-article {
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .btn-read-article:hover {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .blog-card-footer {
+  border-top-color: #272a34 !important;
+}
+
+[data-theme="dark"] .btn-outline-dark {
+  border-color: #3b4050 !important;
+  color: #cbd5e1 !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .btn-outline-dark:hover,
+[data-theme="dark"] .btn-outline-dark.active {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .list-group-item {
+  background-color: #15171c !important;
+  color: #e2e8f0 !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .list-group-item:hover {
+  background-color: #1e2027 !important;
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] #blogEmptyState {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .rtl-toggle-circle {
+  background-color: #1e2027 !important;
+  border-color: #2e323e !important;
+  color: #f1f3f7 !important;
+}
+
+[data-theme="dark"] .rtl-toggle-circle:hover {
+  background-color: #2a2e3a !important;
+  border-color: var(--secondary) !important;
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .blog-filter-card {
+  background-color: #15171c !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .btn-blog-pill {
+  background-color: #1e2027 !important;
+  border-color: #2e323e !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .btn-blog-pill:hover {
+  background-color: #282c38 !important;
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .btn-blog-pill.active {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .blog-search-box input {
+  background-color: #1a1d24 !important;
+  border-color: #272a34 !important;
+  color: #f1f3f7 !important;
+}
+
+/* =========================================
+   ARTICLE READER MODAL (DARK MODE)
+   ========================================= */
+[data-theme="dark"] #articleReaderModal .modal-content {
+  background-color: #12151b !important;
+  border-color: #272d38 !important;
+  color: #f1f3f7 !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] #articleReaderModal .modal-header {
+  background-color: #161a22 !important;
+  border-bottom-color: #272d38 !important;
+}
+
+[data-theme="dark"] #articleReaderModal .modal-header .modal-title {
+  color: #f9fafb !important;
+}
+
+[data-theme="dark"] #articleReaderModal .modal-body {
+  background-color: #12151b !important;
+}
+
+[data-theme="dark"] #articleReaderModal .modal-footer {
+  background-color: #161a22 !important;
+  border-top-color: #272d38 !important;
+}
+
+[data-theme="dark"] .article-rich-text {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .article-rich-text .lead {
+  color: #f8fafc !important;
+  background: rgba(212, 160, 23, 0.1) !important;
+  border-left-color: #d4a017 !important;
+}
+
+[data-theme="dark"] .article-rich-text h4,
+[data-theme="dark"] .article-rich-text h5,
+[data-theme="dark"] .article-rich-text h6 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .article-rich-text p {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .article-rich-text strong {
+  color: #facc15 !important;
+}
+
+[data-theme="dark"] .article-rich-text ul,
+[data-theme="dark"] .article-rich-text ol {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .article-rich-text li {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .article-rich-text .bg-subtle {
+  background-color: #181c25 !important;
+  border-color: #2e3543 !important;
+}
+
+/* =========================================
+   ARTICLE READER 2-COLUMN VIEW (DARK MODE)
+   ========================================= */
+[data-theme="dark"] .article-sidebar-cta {
+  background: #090e1a !important;
+  border: 1px solid #1e293b !important;
+}
+
+[data-theme="dark"] .article-sidebar-guides {
+  background: #15171c !important;
+  border-color: #272a34 !important;
+}
+
+[data-theme="dark"] .sidebar-guides-list::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+}
+
+[data-theme="dark"] .sidebar-guide-item {
+  background-color: #1a1e27 !important;
+  border-color: #282e3b !important;
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .sidebar-guide-item:hover {
+  background-color: #252b37 !important;
+  color: #38bdf8 !important;
+}
+
+[data-theme="dark"] .sidebar-guide-item.active {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sidebar-guide-item .guide-item-arrow {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .article-meta-row {
+  color: #94a3b8 !important;
+  border-bottom-color: #272a34 !important;
+}
+
+[data-theme="dark"] .article-meta-row i {
+  color: #94a3b8 !important;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   DARK MODE BREADCRUMBS & LINK OVERRIDES
+   ========================================================================== */
+
+[data-theme="dark"] .breadcrumb {
+  --bs-breadcrumb-divider-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+[data-theme="dark"] .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+[data-theme="dark"] .breadcrumb-item a {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .breadcrumb-item a:hover {
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+  color: #ffffff !important;
+}
+
+/* Page Header Hero Breadcrumbs in Dark Mode */
+[data-theme="dark"] .page-header-hero .breadcrumb {
+  --bs-breadcrumb-divider-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+[data-theme="dark"] .page-header-hero .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+[data-theme="dark"] .page-header-hero .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[data-theme="dark"] .page-header-hero .breadcrumb-item a:hover {
+  color: var(--secondary) !important;
+}
+
+[data-theme="dark"] .page-header-hero .breadcrumb-item.active {
+  color: #ffffff !important;
+}

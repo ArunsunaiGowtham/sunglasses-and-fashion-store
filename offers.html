@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offers & Bundles | Solaris & Co. Sunglasses & Accessories</title>
+  <meta name="description" content="Unlock seasonal discounts, promotional bundles, flash sales on polarized sunglasses, and discount codes on Tuscan leather belts and caps.">
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕶️</text></svg>">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('lux_store_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ================= SINGLE UNIFIED NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg site-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="brand-icon-box">
+          <i class="bi bi-eyeglasses"></i>
+        </div>
+        <span>SOLARIS<span class="text-secondary">&</span>CO.</span>
+      </a>
+
+      <!-- Action Controls & Hamburger -->
+      <div class="d-flex align-items-center gap-2 order-lg-3">
+        <!-- Theme Toggle -->
+        <button type="button" class="theme-toggle-btn d-inline-flex" title="Toggle Light/Dark Theme">
+          <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+          <span class="theme-toggle-label d-none d-sm-inline">Dark</span>
+        </button>
+        <!-- RTL/LTR Toggle (User Reference) -->
+        <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+          RTL
+        </button>
+        <!-- Search Trigger -->
+        <a href="shop.html" class="nav-action-btn" title="Search Products">
+          <i class="bi bi-search"></i>
+        </a>
+        <!-- Wishlist -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="modal" data-bs-target="#wishlistModal" title="Wishlist">
+          <i class="bi bi-heart"></i>
+          <span class="nav-badge-count wishlist-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Cart -->
+        <button type="button" class="nav-action-btn" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" title="Shopping Bag">
+          <i class="bi bi-bag"></i>
+          <span class="nav-badge-count cart-badge-count" style="display: none;">0</span>
+        </button>
+        <!-- Sign In -->
+        <a href="login.html" class="nav-action-btn d-none d-md-inline-flex" title="Sign In">
+          <i class="bi bi-person"></i>
+        </a>
+        <!-- Hamburger Toggle -->
+        <button class="navbar-toggler border-0 p-1 ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-2"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div class="collapse navbar-collapse order-lg-2" id="primaryNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="bi bi-chevron-down nav-dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home 1 — Store Landing</a></li>
+              <li><a class="dropdown-item" href="index-2.html">Home 2 — Fashion Collection</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="brands.html">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <!-- Mobile Controls inside collapsed menu (<576px) -->
+          <li class="nav-item d-sm-none pt-3 mt-2 border-top">
+            <div class="d-flex align-items-center justify-content-between px-2">
+              <button type="button" class="theme-toggle-btn" title="Toggle Light/Dark Theme">
+                <i class="bi bi-moon-stars-fill theme-toggle-icon"></i>
+                <span class="theme-toggle-label">Dark</span>
+              </button>
+              <button type="button" class="rtl-toggle-circle" title="Switch to RTL Layout" aria-label="Toggle RTL/LTR">
+                RTL
+              </button>
+              <a href="login.html" class="small fw-bold text-secondary">
+                <i class="bi bi-person me-1"></i> Sign In
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Flash Sale Countdown Hero -->
+  <section class="page-header-hero" style="background-image: url('images/headers/header-offers.jpg');">
+    <div class="container py-3">
+      <span class="badge-luxury badge-gold mb-2">Limited-Time Vault Sale</span>
+      <h1 class="display-5 fw-bold mb-2">Seasonal Offers & Curated Bundles</h1>
+      <p class="mb-3">
+        Exclusive promotional packages, seasonal reductions, and verified discount codes on eyewear, Italian belts, and headwear.
+      </p>
+
+      <nav aria-label="breadcrumb" class="mb-4">
+        <ol class="breadcrumb justify-content-center mb-0 small">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Seasonal Offers</li>
+        </ol>
+      </nav>
+
+      <!-- Live Flash Sale Countdown Clock -->
+      <div class="d-inline-flex align-items-center justify-content-center gap-2 gap-sm-3 p-3 rounded-4 bg-surface bg-opacity-10 border border-secondary border-opacity-25 shadow">
+        <div class="text-center px-2 px-sm-3">
+          <div class="display-6 fw-bold text-secondary font-monospace" id="cdDays">02</div>
+          <div class="small text-uppercase text-white-50" style="font-size: 0.72rem;">Days</div>
+        </div>
+        <div class="fs-4 text-white-50">:</div>
+        <div class="text-center px-2 px-sm-3">
+          <div class="display-6 fw-bold text-secondary font-monospace" id="cdHours">14</div>
+          <div class="small text-uppercase text-white-50" style="font-size: 0.72rem;">Hours</div>
+        </div>
+        <div class="fs-4 text-white-50">:</div>
+        <div class="text-center px-2 px-sm-3">
+          <div class="display-6 fw-bold text-secondary font-monospace" id="cdMinutes">36</div>
+          <div class="small text-uppercase text-white-50" style="font-size: 0.72rem;">Minutes</div>
+        </div>
+        <div class="fs-4 text-white-50">:</div>
+        <div class="text-center px-2 px-sm-3">
+          <div class="display-6 fw-bold text-secondary font-monospace" id="cdSeconds">45</div>
+          <div class="small text-uppercase text-white-50" style="font-size: 0.72rem;">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOTIONAL VOUCHERS / COUPONS (1-Click Copy) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-luxury badge-dark mb-2">Verified Promo Codes</span>
+        <h2 class="display-6 fw-bold">Active Shopping Vouchers</h2>
+        <p class="text-muted">Click any code to instantly copy to your clipboard and apply at cart checkout.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Coupon 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-surface border text-center h-100 shadow-sm d-flex flex-column">
+            <span class="badge-luxury badge-gold mb-2 align-self-center">25% OFF</span>
+            <h5 class="fw-bold mb-1">Eyewear Clearance</h5>
+            <p class="small text-muted mb-3">Valid on all polarized and mineral crystal sunglasses.</p>
+            <div class="offer-coupon-box mt-auto">
+              <span class="coupon-code">SOLARIS25</span>
+              <button type="button" class="btn btn-sm btn-coupon-copy" onclick="window.copyCoupon('SOLARIS25')">
+                <i class="bi bi-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-surface border text-center h-100 shadow-sm d-flex flex-column">
+            <span class="badge-luxury badge-dark mb-2 align-self-center">20% OFF</span>
+            <h5 class="fw-bold mb-1">Tuscan Leather Guild</h5>
+            <p class="small text-muted mb-3">Valid on all full-grain bovine and reversible dress belts.</p>
+            <div class="offer-coupon-box mt-auto">
+              <span class="coupon-code">LEATHER20</span>
+              <button type="button" class="btn btn-sm btn-coupon-copy" onclick="window.copyCoupon('LEATHER20')">
+                <i class="bi bi-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-surface border text-center h-100 shadow-sm d-flex flex-column">
+            <span class="badge-luxury badge-gold mb-2 align-self-center">15% OFF</span>
+            <h5 class="fw-bold mb-1">Streetwear Caps & Beanies</h5>
+            <p class="small text-muted mb-3">Valid on washed dad hats, flat brims, and wool beanies.</p>
+            <div class="offer-coupon-box mt-auto">
+              <span class="coupon-code">STREET15</span>
+              <button type="button" class="btn btn-sm btn-coupon-copy" onclick="window.copyCoupon('STREET15')">
+                <i class="bi bi-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coupon 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="p-4 rounded-4 bg-surface border text-center h-100 shadow-sm d-flex flex-column">
+            <span class="badge-luxury badge-discount mb-2 align-self-center">FREE EXPRESS</span>
+            <h5 class="fw-bold mb-1">Global Air Courier</h5>
+            <p class="small text-muted mb-3">Free 2-day express air delivery on any order over $100.</p>
+            <div class="offer-coupon-box mt-auto">
+              <span class="coupon-code">FREESHIP</span>
+              <button type="button" class="btn btn-sm btn-coupon-copy" onclick="window.copyCoupon('FREESHIP')">
+                <i class="bi bi-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURATED PROMOTIONAL BUNDLES (E-Commerce Package Deals) -->
+  <section class="py-5 bg-subtle">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="badge-luxury badge-gold mb-2">Curated Combos</span>
+        <h2 class="display-6 fw-bold">Atelier Wardrobe Bundles</h2>
+        <p class="text-muted">Hand-matched accessories designed to be worn together, bundled with a 25% instant savings.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Bundle 1 -->
+        <div class="col-12 col-lg-4">
+          <div class="offer-card d-flex flex-column">
+            <div class="offer-header">
+              <span class="badge-luxury badge-discount offer-badge">Save $68</span>
+              <h4 class="fw-bold mb-1">The Riviera Explorer</h4>
+              <p class="small text-muted mb-0">For coastal weekends & road trips</p>
+              <div class="mt-3">
+                <span class="display-6 fw-bold text-main">$210</span>
+                <span class="text-muted text-decoration-line-through ms-2">$278</span>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column">
+              <ul class="list-unstyled small mb-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>AeroGold Titanium Aviator</strong> ($189 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Amalfi Braided Woven Belt</strong> ($59 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Heritage Twill Dad Cap</strong> ($30 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i>Luxury microfiber travel case included</li>
+              </ul>
+              <button type="button" class="btn-luxury w-100 mt-auto" onclick="addToCart('sg-1'); addToCart('belt-3'); addToCart('cap-1')">
+                <i class="bi bi-bag-plus me-1"></i> Add Bundle to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 2 (Featured / Popular) -->
+        <div class="col-12 col-lg-4">
+          <div class="offer-card border-secondary shadow-md d-flex flex-column position-relative">
+            <div class="offer-header popular">
+              <span class="badge-luxury badge-gold offer-badge">Most Popular</span>
+              <h4 class="fw-bold mb-1 text-white">The Executive Sartorial</h4>
+              <p class="small text-white-50 mb-0">For boardrooms & high-end travel</p>
+              <div class="mt-3">
+                <span class="display-6 fw-bold text-white">$275</span>
+                <span class="text-white-50 text-decoration-line-through ms-2">$358</span>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column">
+              <ul class="list-unstyled small mb-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Milano Reversible Formal Belt</strong> ($98 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Chronos Stealth Matte Black Watch</strong> ($260 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Complimentary Leather Key Case</strong> ($38 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i>Free express courier worldwide</li>
+              </ul>
+              <button type="button" class="btn-gold w-100 mt-auto" onclick="addToCart('belt-2'); addToCart('acc-3'); addToCart('acc-6')">
+                <i class="bi bi-bag-plus me-1"></i> Add Bundle to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bundle 3 -->
+        <div class="col-12 col-lg-4">
+          <div class="offer-card d-flex flex-column">
+            <div class="offer-header">
+              <span class="badge-luxury badge-discount offer-badge">Save $60</span>
+              <h4 class="fw-bold mb-1">The High-Fashion Siren</h4>
+              <p class="small text-muted mb-0">For gallery openings & cocktail evenings</p>
+              <div class="mt-3">
+                <span class="display-6 fw-bold text-main">$320</span>
+                <span class="text-muted text-decoration-line-through ms-2">$380</span>
+              </div>
+            </div>
+            <div class="p-4 flex-grow-1 d-flex flex-column">
+              <ul class="list-unstyled small mb-4">
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Monaco Oversized Cat-Eye Shades</strong> ($245 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i><strong>Mulberry Silk & Cashmere Scarf</strong> ($135 value)</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i>Rigid gold-embossed presentation box</li>
+                <li class="mb-2"><i class="bi bi-check2-circle text-secondary me-2"></i>Certificate of Italian craftsmanship</li>
+              </ul>
+              <button type="button" class="btn-luxury w-100 mt-auto" onclick="addToCart('sg-3'); addToCart('acc-2')">
+                <i class="bi bi-bag-plus me-1"></i> Add Bundle to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SALE HIGHLIGHTS GRID -->
+  <section class="py-5">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <span class="badge-luxury badge-discount mb-2">Clearance Products</span>
+          <h3 class="fw-bold mb-1">Direct-Discounted Products</h3>
+          <p class="text-muted mb-0">Instant marked-down prices across all 4 fashion departments.</p>
+        </div>
+        <a href="shop.html" class="btn-luxury-outline btn-sm">
+          Browse All (26 Products) <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
+
+      <div class="row g-4" id="offersSaleProductsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Footer -->
+      <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Column 1: Brand Info -->
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand text-white mb-3 d-inline-flex align-items-center" href="index.html">
+            <div class="brand-icon-box me-3">
+              <i class="bi bi-eyeglasses"></i>
+            </div>
+            <div class="d-inline-flex flex-column">
+              <span class="brand-title fw-bold" style="letter-spacing: 0.04em; font-size: 1.25rem; line-height: 1.2;">SOLARIS<span class="text-secondary">&</span>CO.</span>
+              <span class="brand-subtitle text-uppercase" style="font-size: 0.62rem; letter-spacing: 0.16em; opacity: 0.75; line-height: 1.2;">LUXURY EYEWEAR & ACCESSORIES</span>
+            </div>
+          </a>
+          <p class="small text-muted mb-4 pe-lg-3">
+            Solaris & Co. is a premier purveyor of luxury eyewear, artisan leather belts, contemporary headwear, and curated fashion accessories, dedicated to timeless craftsmanship and bespoke excellence.
+          </p>
+          <div class="social-links">
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="javascript:void(0)" class="social-icon-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="brands.html">Heritage Brands</a></li>
+            <li><a href="offers.html">Pricing & Offers</a></li>
+            <li><a href="blog.html">Editorial & Guides</a></li>
+            <li><a href="login.html">Client Dashboard</a></li>
+            <li><a href="contact.html">Contact Headquarters</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=sunglasses">Designer Sunglasses</a></li>
+            <li><a href="shop.html?category=belts">Artisan Leather Belts</a></li>
+            <li><a href="shop.html?category=caps">Contemporary Caps</a></li>
+            <li><a href="shop.html?category=accessories">Luxury Accessories</a></li>
+            <li><a href="shop.html">Bespoke Styling</a></li>
+            <li><a href="blog.html">Leather Care & Repair</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Boutique & Concierge Info -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <h5>Boutique & Concierge Info</h5>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-geo-alt text-secondary me-2"></i> <span>742 Fifth Avenue, Suite 200, NY 10022</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-telephone text-secondary me-2"></i> <span>+1 (800) 555-7423 (0199)</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-envelope text-secondary me-2"></i> <span>concierge@solaris-accessories.com</span>
+          </p>
+          <p class="small mb-2 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-clock text-secondary me-2"></i> <span>Monday – Friday: 7:00 AM – 8:00 PM</span>
+          </p>
+          <p class="small mb-0 footer-contact-item d-flex align-items-center">
+            <i class="bi bi-calendar-event text-secondary me-2"></i> <span>Saturday: 8:00 AM – 3:00 PM (24/7 Dispatch)</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+        <div>
+          © 2026 Solaris & Co. Sunglasses & Fashion Store. All rights reserved.
+        </div>
+        <div class="d-flex align-items-center gap-4">
+          <a href="privacy-policy.html" class="footer-legal-link">Privacy Policy</a>
+          <a href="terms-of-care.html" class="footer-legal-link">Terms of Care</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Offcanvas Cart & Wishlist Modal -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold"><i class="bi bi-bag me-2 text-secondary"></i> Your Shopping Bag</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cartEmptyMsg" class="text-center py-5 d-none">
+        <i class="bi bi-bag-x fs-1 text-muted mb-3"></i>
+        <h6>Your shopping bag is empty</h6>
+        <a href="shop.html" class="btn-luxury btn-sm mt-3" data-bs-dismiss="offcanvas">Start Shopping</a>
+      </div>
+      <div id="cartItemsList" class="flex-grow-1 overflow-y-auto"></div>
+      <div id="cartFooter" class="border-top pt-3 mt-auto">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="text-muted">Subtotal</span>
+          <span class="fw-bold fs-5" id="cartSubtotal">$0.00</span>
+        </div>
+        <button type="button" class="btn-luxury w-100 mb-2 py-3" id="btnCheckoutDemo">Proceed to Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="wishlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header border-bottom">
+          <h5 class="modal-title fw-bold"><i class="bi bi-heart me-2 text-danger"></i> Saved in Wishlist</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div id="wishlistEmptyMsg" class="text-center py-4 d-none"><h6>No items saved yet</h6></div>
+          <div id="wishlistItemsList"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content overflow-hidden">
+        <div class="modal-header border-0 pb-0"><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <div class="modal-body p-4">
+          <div class="row g-4">
+            <div class="col-12 col-md-6">
+              <img id="quickViewImg" src="" alt="Product Quick View" class="img-fluid rounded-2" style="max-height: 340px; object-fit: cover;">
+            </div>
+            <div class="col-12 col-md-6 d-flex flex-column">
+              <div class="text-secondary small fw-bold text-uppercase mb-1" id="quickViewBrand">Brand</div>
+              <h4 class="fw-bold mb-2" id="quickViewTitle">Product Name</h4>
+              <div class="d-flex align-items-baseline gap-2 mb-3">
+                <span class="fs-4 fw-bold" id="quickViewPrice">$0.00</span>
+                <span class="text-muted text-decoration-line-through small" id="quickViewOldPrice">$0.00</span>
+              </div>
+              <p class="text-muted small mb-3" id="quickViewDesc"></p>
+              <div class="d-flex gap-2 mt-auto pt-3 border-top">
+                <button type="button" class="btn-luxury flex-grow-1" id="quickViewBtnAdd">Add to Bag</button>
+                <a href="product-details.html" class="btn-luxury-outline" id="quickViewDetailsLink">Full Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // 1. Live Countdown Timer Simulation
+      let secondsRemaining = 2 * 24 * 3600 + 14 * 3600 + 36 * 60 + 45;
+      function updateTimer() {
+        const d = Math.floor(secondsRemaining / (24 * 3600));
+        const h = Math.floor((secondsRemaining % (24 * 3600)) / 3600);
+        const m = Math.floor((secondsRemaining % 3600) / 60);
+        const s = secondsRemaining % 60;
+
+        document.getElementById("cdDays").textContent = String(d).padStart(2, "0");
+        document.getElementById("cdHours").textContent = String(h).padStart(2, "0");
+        document.getElementById("cdMinutes").textContent = String(m).padStart(2, "0");
+        document.getElementById("cdSeconds").textContent = String(s).padStart(2, "0");
+
+        if (secondsRemaining > 0) {
+          secondsRemaining--;
+        }
+      }
+      setInterval(updateTimer, 1000);
+      updateTimer();
+
+      // 2. Render Sale Products (strictly products that have discount badges)
+      const container = document.getElementById("offersSaleProductsGrid");
+      if (container && typeof PRODUCTS_DATA !== "undefined") {
+        const saleItems = PRODUCTS_DATA.filter(p => p.discount).slice(0, 4);
+        let html = "";
+        saleItems.forEach(p => html += window.createProductCardHTML(p));
+        container.innerHTML = html;
+      }
+    });
+  </script>
+</body>
+</html>
+

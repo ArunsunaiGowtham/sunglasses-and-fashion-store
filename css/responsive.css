@@ -1,0 +1,713 @@
+/* ==========================================================================
+   SUNGLASSES & FASHION ACCESSORIES STORE - RESPONSIVE STYLESHEET
+   Mobile-First Optimization tested for:
+   320px, 360px, 375px, 390px, 414px, 430px, 576px, 768px, 992px, 1200px, 1440px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. GLOBAL MOBILE FOUNDATIONS (Viewport Stability, Touch & iOS Fixes)
+   -------------------------------------------------------------------------- */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent auto-zoom on input focus on iOS Safari */
+@media (max-width: 767.98px) {
+  input[type="text"],
+  input[type="search"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   1. LARGE DESKTOPS (1440px and up)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+  .hero-title {
+    font-size: 3.8rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. STANDARD DESKTOPS (1200px to 1439px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1399.98px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. LAPTOPS & TABLETS LANDSCAPE (992px to 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199.98px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .category-card {
+    height: 250px;
+  }
+  .editorial-card {
+    height: 420px;
+  }
+
+  /* Single Navbar spacing alignment on laptop viewports */
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.55rem !important;
+    font-size: 0.88rem;
+  }
+  .navbar-nav .nav-link.active::after {
+    left: 0.55rem;
+    right: 0.55rem;
+  }
+  .theme-toggle-btn .theme-toggle-label,
+  .rtl-toggle-btn .rtl-toggle-label {
+    display: none;
+  }
+  .theme-toggle-btn,
+  .rtl-toggle-btn {
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. TABLETS PORTRAIT & MEDIUM SCREENS (768px to 991.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .site-navbar {
+    padding: 0.55rem 0;
+  }
+
+  .navbar-collapse {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    margin-top: 0.75rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .hero-main {
+    min-height: 460px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.02rem;
+  }
+
+  .features-strip {
+    padding: 2rem 0;
+  }
+
+  .feature-box {
+    margin-bottom: 1.25rem;
+  }
+
+  .editorial-card {
+    height: 360px;
+    margin-bottom: 1.5rem;
+  }
+
+  .gallery-main-img-box img {
+    max-height: 400px;
+  }
+
+  .cart-item-row {
+    gap: 0.75rem;
+  }
+
+  /* Shop & Article Sidebars: Natural vertical stack on tablets */
+  .shop-sidebar,
+  .article-sidebar {
+    position: static !important;
+    top: auto !important;
+    margin-top: 1.5rem;
+  }
+
+  /* Blog Filter Card on Tablets */
+  .blog-filter-card {
+    margin-top: -36px !important;
+    padding: 1.15rem !important;
+  }
+
+  .blog-filter-card > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.85rem !important;
+  }
+
+  .blog-search-box {
+    width: 100% !important;
+    min-width: 100% !important;
+    flex: 1 1 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. SMARTPHONES & PHABLETS (max-width: 767.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767.98px) {
+  /* Storefront Hero */
+  .hero-main {
+    min-height: 400px;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 2.5rem 0;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.95rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  /* Page Header Heroes (Blog, Shop, About, Contact, etc.) */
+  .page-header-hero {
+    padding-top: 3rem !important;
+    padding-bottom: 4.5rem !important;
+    min-height: 250px !important;
+  }
+
+  .page-header-hero.blog-header-hero {
+    padding-top: 3.25rem !important;
+    padding-bottom: 5.75rem !important;
+    min-height: 285px !important;
+  }
+
+  .page-header-hero h1,
+  .page-header-hero .display-5,
+  .page-header-hero .display-6 {
+    font-size: 1.65rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.65rem !important;
+  }
+
+  .page-header-hero .lead {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    max-width: 95% !important;
+    padding: 0 0.5rem;
+  }
+
+  .page-header-hero .breadcrumb {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     Blog Filter & Search Card Mobile Touch-Carousel
+     ------------------------------------------------------------------------ */
+  .blog-filter-card {
+    margin-top: -34px !important;
+    margin-bottom: 2rem !important;
+    padding: 0.85rem !important;
+    border-radius: 16px !important;
+  }
+
+  .blog-filter-card > div {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+
+  /* Smooth horizontal swipeable pill strip */
+  .blog-pills-wrap,
+  #blogCategoryPillsWrap,
+  #blogCategoryPills {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 0 !important;
+    gap: 0.45rem !important;
+    scrollbar-width: thin;
+    width: 100% !important;
+  }
+
+  .blog-pills-wrap::-webkit-scrollbar,
+  #blogCategoryPillsWrap::-webkit-scrollbar,
+  #blogCategoryPills::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .blog-pills-wrap::-webkit-scrollbar-track,
+  #blogCategoryPillsWrap::-webkit-scrollbar-track,
+  #blogCategoryPills::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .blog-pills-wrap::-webkit-scrollbar-thumb,
+  #blogCategoryPillsWrap::-webkit-scrollbar-thumb,
+  #blogCategoryPills::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.45);
+    border-radius: 4px;
+  }
+
+  .btn-blog-pill,
+  #blogCategoryPills .filter-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 0.8rem !important;
+    padding: 0.42rem 0.85rem !important;
+    border-radius: 9999px !important;
+  }
+
+  .blog-search-box {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .blog-search-box input {
+    height: 42px !important;
+    font-size: 16px !important;
+    padding-left: 2.4rem !important;
+    border-radius: 12px !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     Blog Catalog Cards & Grid
+     ------------------------------------------------------------------------ */
+  .blog-card-img-wrap {
+    height: 200px;
+  }
+
+  .blog-title {
+    font-size: 1.05rem;
+    line-height: 1.35;
+  }
+
+  .blog-excerpt {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  /* ------------------------------------------------------------------------
+     Blog Dedicated Article Reader View (Mobile Polish)
+     ------------------------------------------------------------------------ */
+  .article-reader-card {
+    padding: 0 !important;
+  }
+
+  #detailArticleImg {
+    max-height: 250px !important;
+    border-radius: 14px !important;
+    object-fit: cover !important;
+  }
+
+  #detailArticleMeta {
+    gap: 0.4rem 1rem !important;
+    font-size: 0.82rem !important;
+    margin-bottom: 1rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  #detailArticleMeta span {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #detailArticleTitle {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  #detailArticleCategory {
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.75rem !important;
+  }
+
+  .article-rich-text {
+    font-size: 0.95rem !important;
+    line-height: 1.65 !important;
+  }
+
+  .article-rich-text p {
+    margin-bottom: 1.15rem !important;
+  }
+
+  .article-rich-text h2,
+  .article-rich-text h3 {
+    font-size: 1.25rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .article-rich-text blockquote {
+    padding: 0.85rem 1rem !important;
+    margin: 1.25rem 0 !important;
+    font-size: 0.9rem !important;
+    border-left-width: 3px !important;
+  }
+
+  /* Article Hotline & Guides Sidebar on Mobile */
+  .article-sidebar {
+    margin-top: 1.75rem !important;
+  }
+
+  .article-sidebar-cta {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 16px !important;
+  }
+
+  .article-sidebar-cta h4 {
+    font-size: 1.2rem !important;
+  }
+
+  .article-sidebar-cta .cta-phone {
+    font-size: 1.5rem !important;
+  }
+
+  .article-sidebar-guides {
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
+  }
+
+  .article-sidebar-guides h5 {
+    font-size: 1.05rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .sidebar-guides-list {
+    max-height: 320px !important;
+  }
+
+  .sidebar-guide-item {
+    padding: 0.65rem 0.85rem !important;
+    font-size: 0.82rem !important;
+    min-height: 42px;
+  }
+
+  /* ------------------------------------------------------------------------
+     Product Details & Shop Page on Mobile
+     ------------------------------------------------------------------------ */
+  .category-card {
+    height: 220px;
+  }
+
+  .product-body {
+    padding: 1rem;
+  }
+
+  .product-title {
+    font-size: 0.95rem;
+    height: 2.6em;
+  }
+
+  #shopSortSelect {
+    width: 100% !important;
+    font-size: 16px !important;
+  }
+
+  .gallery-main-img-box {
+    min-height: 260px;
+    max-height: 340px;
+  }
+
+  .gallery-main-img-box img {
+    max-height: 320px !important;
+  }
+
+  /* Product details primary CTA button full-width */
+  #detailBtnAddToCart {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    order: 2;
+    padding: 0.85rem 1.25rem !important;
+  }
+
+  .quantity-control {
+    order: 1;
+  }
+
+  #detailBtnWishlist {
+    order: 1;
+  }
+
+  /* ------------------------------------------------------------------------
+     Site Footer on Mobile (Consistent, Left-Aligned & Clean Wrap)
+     ------------------------------------------------------------------------ */
+  .site-footer {
+    padding: 3rem 0 1.5rem !important;
+    text-align: left !important;
+  }
+
+  .site-footer .navbar-brand {
+    display: inline-flex !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .site-footer .social-links {
+    justify-content: flex-start !important;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .site-footer h5 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: 0.03em;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.6rem !important;
+  }
+
+  .footer-links a {
+    font-size: 0.86rem !important;
+    display: inline-block;
+    padding: 0.2rem 0;
+  }
+
+  /* Contact Items Alignment & Word-break */
+  .footer-contact-item {
+    display: flex !important;
+    align-items: flex-start !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    margin-bottom: 0.65rem !important;
+    font-size: 0.84rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .footer-contact-item i {
+    margin-top: 3px !important;
+    margin-right: 0.5rem !important;
+    flex-shrink: 0 !important;
+    font-size: 0.95rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1rem !important;
+    padding-top: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+
+  .footer-bottom .d-flex {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 1.25rem !important;
+  }
+
+  /* Toasts */
+  .toast-container-custom {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .custom-toast {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   6. STANDARD SMARTPHONES (320px to 575.98px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 575.98px) {
+  /* Prevent top bar crowding: hide duplicated toggles already in mobile drawer */
+  .site-navbar .order-lg-3 > .theme-toggle-btn,
+  .site-navbar .order-lg-3 > .rtl-toggle-circle {
+    display: none !important;
+  }
+
+  .site-navbar .order-lg-3 {
+    gap: 0.35rem !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.15rem;
+  }
+
+  .navbar-brand .brand-title {
+    font-size: 1.05rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .navbar-brand .brand-subtitle {
+    display: none !important;
+  }
+
+  .brand-icon-box {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .nav-action-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  /* Offcanvas full width on mobile */
+  .offcanvas.offcanvas-end {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  /* Modals */
+  .modal-dialog {
+    margin: 0.5rem !important;
+  }
+
+  .modal-content {
+    border-radius: 16px !important;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+
+  .btn-luxury, .btn-luxury-outline, .btn-gold {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .category-card {
+    height: 200px;
+  }
+
+  .promo-banner {
+    min-height: 220px;
+  }
+
+  .promo-overlay {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .brand-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .brand-logo-wrap {
+    height: 48px;
+    margin-bottom: 0.75rem;
+  }
+
+  .product-thumb-wrapper {
+    padding-top: 100%;
+  }
+
+  .product-actions-floating {
+    opacity: 0.95;
+    transform: none;
+  }
+
+  .action-btn-pill {
+    width: 34px;
+    height: 34px;
+    font-size: 0.88rem;
+  }
+
+  .product-price {
+    font-size: 1.05rem;
+  }
+
+  .btn-add-cart-sm {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .offer-header {
+    padding: 1.5rem 1rem;
+  }
+
+  .gallery-main-img-box img {
+    max-height: 290px;
+  }
+
+  .gallery-thumb-item {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   7. ULTRA-NARROW SCREENS (320px to 360px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .hero-title {
+    font-size: 1.55rem;
+  }
+
+  .navbar-brand .brand-title {
+    font-size: 0.95rem !important;
+  }
+
+  .brand-icon-box {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .nav-action-btn {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .site-navbar .order-lg-3 {
+    gap: 0.2rem !important;
+  }
+
+  .product-title {
+    font-size: 0.88rem;
+  }
+
+  #detailArticleTitle {
+    font-size: 1.25rem !important;
+  }
+
+  .article-sidebar-cta .cta-phone {
+    font-size: 1.35rem !important;
+  }
+}
