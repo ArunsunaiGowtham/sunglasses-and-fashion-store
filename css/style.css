@@ -65,7 +65,7 @@ body {
   background-color: var(--bg-body);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -295,9 +295,10 @@ textarea.form-control::placeholder {
 .site-navbar {
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 1030;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
   transition: all var(--transition-normal);
   padding: 0.95rem 0;
 }
