@@ -142,14 +142,19 @@ html, body {
 
   /* Blog Filter Card on Tablets */
   .blog-filter-card {
-    margin-top: -36px !important;
-    padding: 1.15rem !important;
-  }
-
-  .blog-filter-card > div {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1.25rem !important;
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 0.85rem !important;
+    gap: 1rem !important;
+  }
+
+  .blog-pills-wrap {
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
   }
 
   .blog-search-box {
@@ -207,8 +212,8 @@ html, body {
 
   .page-header-hero.blog-header-hero {
     padding-top: 3.25rem !important;
-    padding-bottom: 5.75rem !important;
-    min-height: 285px !important;
+    padding-bottom: 3.25rem !important;
+    min-height: 220px !important;
   }
 
   .page-header-hero h1,
@@ -235,16 +240,13 @@ html, body {
      Blog Filter & Search Card Mobile Touch-Carousel
      ------------------------------------------------------------------------ */
   .blog-filter-card {
-    margin-top: -34px !important;
-    margin-bottom: 2rem !important;
-    padding: 0.85rem !important;
+    margin-top: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 1rem !important;
     border-radius: 16px !important;
-  }
-
-  .blog-filter-card > div {
     flex-direction: column !important;
     align-items: stretch !important;
-    gap: 0.75rem !important;
+    gap: 0.85rem !important;
   }
 
   /* Smooth horizontal swipeable pill strip */

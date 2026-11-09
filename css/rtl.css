@@ -52,6 +52,22 @@
   right: 14px;
 }
 
+[dir="rtl"] .blog-search-box {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .blog-search-box i {
+  left: auto !important;
+  right: 14px !important;
+}
+
+[dir="rtl"] .blog-search-box input {
+  padding-left: 1rem !important;
+  padding-right: 2.5rem !important;
+  text-align: right;
+}
+
 [dir="rtl"] .nav-badge-count {
   right: auto;
   left: -2px;
