@@ -485,10 +485,13 @@ textarea.form-control::placeholder {
   align-items: center;
   justify-content: center;
   transition: color var(--transition-fast);
+  text-decoration: none;
 }
 
-.nav-action-btn:hover {
-  color: var(--secondary);
+.nav-action-btn:hover,
+.nav-action-btn:focus {
+  color: var(--secondary) !important;
+  text-decoration: none;
 }
 
 .nav-badge-count {
