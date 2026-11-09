@@ -467,50 +467,71 @@ html, body {
      Site Footer on Mobile (Consistent, Left-Aligned & Clean Wrap)
      ------------------------------------------------------------------------ */
   .site-footer {
-    padding: 3rem 0 1.5rem !important;
+    padding: 3rem 0 2rem !important;
     text-align: left !important;
+  }
+
+  /* Full-width stacked columns on mobile */
+  .site-footer .row {
+    row-gap: 2.25rem !important;
+  }
+
+  .site-footer .row > [class*="col-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
   }
 
   .site-footer .navbar-brand {
     display: inline-flex !important;
     align-items: center !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.25rem !important;
     text-align: left !important;
   }
 
   .site-footer .navbar-brand .brand-title {
-    font-size: 1.18rem !important;
+    font-size: 1.25rem !important;
     letter-spacing: 0.04em !important;
     line-height: 1.2 !important;
   }
 
   .site-footer .navbar-brand .brand-subtitle {
     display: block !important;
-    font-size: 0.58rem !important;
-    letter-spacing: 0.12em !important;
+    font-size: 0.62rem !important;
+    letter-spacing: 0.14em !important;
     opacity: 0.75 !important;
     line-height: 1.2 !important;
   }
 
   .site-footer .footer-desc,
   .site-footer p.small {
-    font-size: 0.86rem !important;
+    font-size: 0.92rem !important;
     line-height: 1.6 !important;
-    margin-bottom: 1rem !important;
+    margin-bottom: 1.25rem !important;
+    color: #cbd5e1 !important;
+    max-width: 100% !important;
   }
 
   .site-footer .social-links {
+    display: flex !important;
     justify-content: flex-start !important;
-    gap: 0.5rem !important;
+    gap: 0.65rem !important;
     margin-bottom: 0 !important;
   }
 
+  .site-footer .social-icon-btn {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+
   .site-footer h5 {
-    font-size: 0.98rem !important;
+    font-size: 1.2rem !important;
     font-weight: 700 !important;
-    margin-bottom: 0.85rem !important;
+    margin-bottom: 1.15rem !important;
     letter-spacing: 0.02em !important;
     color: #ffffff !important;
+    text-align: left !important;
   }
 
   .footer-links {
@@ -520,36 +541,45 @@ html, body {
   }
 
   .footer-links li {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .footer-links li:last-child {
+    margin-bottom: 0 !important;
   }
 
   .footer-links a {
-    font-size: 0.85rem !important;
+    font-size: 0.95rem !important;
     display: block !important;
     width: 100% !important;
-    line-height: 1.35 !important;
-    padding: 0.2rem 0 !important;
+    line-height: 1.5 !important;
+    padding: 0.1rem 0 !important;
     color: #cbd5e1 !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
+    text-decoration: none !important;
+    text-align: left !important;
   }
 
-  /* Contact Items Alignment & Word-break */
+  /* Contact Items Alignment & Spacing */
   .footer-contact-item {
     display: flex !important;
     align-items: flex-start !important;
     gap: 0.75rem !important;
-    margin-bottom: 0.65rem !important;
-    font-size: 0.85rem !important;
-    line-height: 1.45 !important;
+    margin-bottom: 0.85rem !important;
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
     word-break: break-word !important;
     overflow-wrap: anywhere !important;
+    text-align: left !important;
+  }
+
+  .footer-contact-item:last-child {
+    margin-bottom: 0 !important;
   }
 
   .footer-contact-item i {
     width: 20px !important;
     min-width: 20px !important;
-    height: 1.25rem !important;
+    height: 1.4rem !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -564,35 +594,42 @@ html, body {
   .footer-contact-item span {
     flex: 1 !important;
     min-width: 0 !important;
-    line-height: 1.45 !important;
-  }
-
-  /* Footer Bottom Clean Left-Aligned Stacking on Mobile */
-  .footer-bottom {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
-    gap: 0.75rem !important;
-    padding-top: 1.25rem !important;
-    margin-top: 2rem !important;
-  }
-
-  .footer-bottom > div:first-child {
-    text-align: left !important;
-    font-size: 0.82rem !important;
     line-height: 1.5 !important;
     color: #cbd5e1 !important;
   }
 
+  /* Footer Bottom Clean Left-Aligned Stacking on Mobile */
+  .footer-bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 1.15rem !important;
+    padding-top: 1.75rem !important;
+    margin-top: 2.25rem !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .footer-bottom > div:first-child {
+    text-align: left !important;
+    font-size: 0.92rem !important;
+    line-height: 1.55 !important;
+    color: #cbd5e1 !important;
+    max-width: 100% !important;
+  }
+
   .footer-bottom .d-flex {
+    display: flex !important;
+    align-items: center !important;
     justify-content: flex-start !important;
     flex-wrap: wrap !important;
-    gap: 1.5rem !important;
+    gap: 1.75rem !important;
   }
 
   .footer-legal-link {
-    font-size: 0.82rem !important;
+    font-size: 0.92rem !important;
     color: #cbd5e1 !important;
+    text-decoration: none !important;
   }
 
   /* Toasts */
@@ -807,34 +844,44 @@ html, body {
   }
 
   .site-footer {
-    padding: 2.5rem 0 1.25rem !important;
+    padding: 2.5rem 0 1.5rem !important;
   }
 
   .site-footer .navbar-brand .brand-title {
-    font-size: 1.05rem !important;
+    font-size: 1.15rem !important;
+  }
+
+  .site-footer h5 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.95rem !important;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.75rem !important;
   }
 
   .footer-links a {
-    font-size: 0.8rem !important;
-    padding: 0.15rem 0 !important;
+    font-size: 0.88rem !important;
+    padding: 0.1rem 0 !important;
   }
 
   .footer-contact-item {
-    font-size: 0.81rem !important;
-    gap: 0.5rem !important;
+    font-size: 0.86rem !important;
+    gap: 0.6rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .footer-contact-item i {
     width: 18px !important;
     min-width: 18px !important;
-    font-size: 0.88rem !important;
+    font-size: 0.9rem !important;
   }
 
   .footer-bottom > div:first-child {
-    font-size: 0.78rem !important;
+    font-size: 0.85rem !important;
   }
 
   .footer-legal-link {
-    font-size: 0.78rem !important;
+    font-size: 0.85rem !important;
   }
 }
