@@ -128,3 +128,14 @@
   transform: none;
 }
 
+/* FAQ Accordion RTL */
+[dir="rtl"] .site-faq-accordion .accordion-button::after {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+
+[dir="rtl"] .promo-coupon-pill {
+  direction: rtl;
+}
+
+
