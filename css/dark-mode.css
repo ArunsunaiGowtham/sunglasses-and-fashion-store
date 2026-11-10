@@ -260,9 +260,9 @@
 }
 
 [data-theme="dark"] .site-footer .brand-icon-box {
-  background: rgba(229, 193, 88, 0.25) !important;
-  border-color: rgba(229, 193, 88, 0.5) !important;
-  color: var(--secondary) !important;
+  background: var(--secondary) !important;
+  color: #0b0c0e !important;
+  border: none !important;
 }
 
 [data-theme="dark"] .site-footer p,

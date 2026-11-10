@@ -2155,11 +2155,38 @@ textarea.form-control::placeholder {
   color: var(--secondary) !important;
 }
 
-/* High contrast golden brand icon box in footer */
-.site-footer .brand-icon-box {
-  background: rgba(197, 160, 89, 0.2) !important;
+/* Brand Logo in Footer: Exact twin matching navbar brand logo */
+.site-footer .navbar-brand {
+  font-family: var(--font-heading) !important;
+  font-size: 1.6rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.site-footer .navbar-brand span {
+  color: #ffffff !important;
+}
+
+.site-footer .navbar-brand .text-secondary {
   color: var(--secondary) !important;
-  border: 1px solid rgba(197, 160, 89, 0.45) !important;
+}
+
+.site-footer .brand-icon-box {
+  width: 36px !important;
+  height: 36px !important;
+  background: var(--secondary) !important;
+  color: #0b0c0e !important;
+  border-radius: 8px !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.15rem !important;
 }
 
 .site-footer h5 {
