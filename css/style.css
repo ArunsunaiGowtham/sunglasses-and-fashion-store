@@ -308,6 +308,101 @@ textarea.form-control::placeholder {
   padding: 0.7rem 0;
 }
 
+/* ==========================================================================
+   HOME PAGE 1 DEDICATED LUXURY NAVBAR
+   (Distinct style matching the dark hero, eliminating light-mode background clash)
+   ========================================================================== */
+
+.site-navbar-home {
+  background-color: #0d0e11 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.site-navbar-home .navbar-brand {
+  color: #ffffff !important;
+}
+
+.site-navbar-home .brand-icon-box {
+  background: var(--secondary) !important;
+  color: #0b0c0e !important;
+}
+
+.site-navbar-home .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.site-navbar-home .navbar-nav .nav-link:hover,
+.site-navbar-home .navbar-nav .nav-link.active {
+  color: var(--secondary) !important;
+}
+
+.site-navbar-home .nav-action-btn {
+  color: #ffffff !important;
+}
+
+.site-navbar-home .nav-action-btn:hover {
+  color: var(--secondary) !important;
+}
+
+.site-navbar-home .rtl-toggle-circle {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.site-navbar-home .rtl-toggle-circle:hover {
+  background: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0b0c0e !important;
+}
+
+.site-navbar-home .theme-toggle-btn {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+}
+
+.site-navbar-home .theme-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: var(--secondary) !important;
+}
+
+.site-navbar-home.scrolled {
+  background-color: rgba(11, 12, 15, 0.98) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.site-navbar-home .dropdown-menu {
+  background-color: #15171c !important;
+  border: 1px solid #272a34 !important;
+  border-top: 2px solid var(--secondary) !important;
+}
+
+.site-navbar-home .dropdown-item {
+  color: #e2e8f0 !important;
+}
+
+.site-navbar-home .dropdown-item:hover,
+.site-navbar-home .dropdown-item.active {
+  background-color: #1e2027 !important;
+  color: var(--secondary) !important;
+}
+
+@media (max-width: 991.98px) {
+  .site-navbar-home .navbar-collapse {
+    background: #121316 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+  }
+  .site-navbar-home .navbar-toggler {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .site-navbar-home .navbar-toggler i {
+    color: #ffffff !important;
+  }
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -862,7 +957,7 @@ textarea.form-control::placeholder {
   position: relative;
   background-color: var(--bg-subtle);
   overflow: hidden;
-  padding-top: 100%; /* 1:1 Aspect Ratio */
+  padding-top: 75%; /* Balanced fashion eyewear ratio without excessive dead space */
 }
 
 .product-thumb-wrapper img {
@@ -872,6 +967,7 @@ textarea.form-control::placeholder {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 48%;
   transition: transform var(--transition-slow);
 }
 
@@ -935,18 +1031,18 @@ textarea.form-control::placeholder {
 }
 
 .product-body {
-  padding: 1.25rem;
+  padding: 1rem 1.15rem 1.15rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
 .product-brand-row {
-  min-height: 22px;
+  min-height: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.35rem;
 }
 
 .product-brand {

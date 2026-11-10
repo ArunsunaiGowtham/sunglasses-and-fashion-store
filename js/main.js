@@ -609,16 +609,20 @@
     const wishlist = getWishlist();
     const isWishlisted = wishlist.includes(product.id);
 
-    // Badges
+    // Badges: Distinct priority labeling (ensures diverse, non-repetitive badges across cards)
     let badgesHtml = "";
-    if (product.discount) {
-      badgesHtml += `<span class="badge-luxury badge-discount">${product.discount}</span>`;
-    }
-    if (product.isNew) {
-      badgesHtml += `<span class="badge-luxury badge-dark">NEW</span>`;
-    }
-    if (product.isTrending) {
-      badgesHtml += `<span class="badge-luxury badge-gold">TRENDING</span>`;
+    if (product.badge) {
+      badgesHtml = `<span class="badge-luxury ${product.badgeClass || 'badge-gold'}">${product.badge}</span>`;
+    } else if (product.discount && !product.isNew && !product.isTrending) {
+      badgesHtml = `<span class="badge-luxury badge-discount">${product.discount}</span>`;
+    } else if (product.isTrending && !product.isNew) {
+      badgesHtml = `<span class="badge-luxury badge-gold">TRENDING</span>`;
+    } else if (product.isNew) {
+      badgesHtml = `<span class="badge-luxury badge-dark">NEW</span>`;
+    } else if (product.discount) {
+      badgesHtml = `<span class="badge-luxury badge-discount">${product.discount}</span>`;
+    } else if (product.isBestSeller) {
+      badgesHtml = `<span class="badge-luxury badge-gold">BEST SELLER</span>`;
     }
 
     // Swatches
