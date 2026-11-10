@@ -1459,6 +1459,16 @@ textarea.form-control::placeholder {
 .brand-logo-wrap img {
   max-height: 54px;
   max-width: 180px;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.9;
+  transition: all var(--transition-fast);
+}
+
+.brand-card:hover .brand-logo-wrap img,
+.brand-card:hover .brand-logo-wrap svg {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -1522,7 +1532,7 @@ textarea.form-control::placeholder {
 
 .brand-tag {
   background: var(--bg-subtle);
-  color: var(--text-muted);
+  color: #374151;
   font-size: 0.74rem;
   font-weight: 600;
   padding: 0.35rem 0.65rem;

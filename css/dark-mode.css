@@ -114,9 +114,22 @@
   color: #ffffff;
 }
 
+[data-theme="dark"] .brand-logo-wrap img,
+[data-theme="dark"] .brand-logo-wrap svg {
+  filter: brightness(0) invert(1) !important;
+  opacity: 0.95;
+}
+
+[data-theme="dark"] .brand-card:hover .brand-logo-wrap img,
+[data-theme="dark"] .brand-card:hover .brand-logo-wrap svg {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
 [data-theme="dark"] .brand-tag {
-  background: var(--bg-subtle);
-  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0 !important;
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 [data-theme="dark"] .blog-card {
