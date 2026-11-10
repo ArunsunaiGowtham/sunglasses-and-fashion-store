@@ -1461,21 +1461,85 @@ textarea.form-control::placeholder {
   max-width: 180px;
 }
 
+/* ==========================================================================
+   BRANDS DIRECTORY (STRAIGHT ALIGNMENT & LUXURY FILTER DESIGN)
+   ========================================================================== */
+
+.brand-filter-nav {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 4px;
+  display: inline-flex;
+  gap: 4px;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-filter-pill {
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.86rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 50px;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.brand-filter-pill:hover {
+  color: var(--secondary);
+  background: rgba(197, 160, 89, 0.08);
+}
+
+.brand-filter-pill.active {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand-filter-pill .badge {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.45rem;
+}
+
+.brand-filter-pill.active .badge {
+  background: var(--secondary) !important;
+  color: #0b0c0e !important;
+}
+
 .brand-specialty-tags {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 6px;
-  justify-content: center;
-  margin: 1rem 0 1.25rem;
+  width: 100%;
+  margin: 0.85rem 0 1.25rem;
 }
 
 .brand-tag {
   background: var(--bg-subtle);
   color: var(--text-muted);
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
+  padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.brand-card:hover .brand-tag {
+  border-color: rgba(197, 160, 89, 0.35);
+  background: var(--bg-surface);
 }
 
 /* ==========================================================================
@@ -1489,7 +1553,7 @@ textarea.form-control::placeholder {
   padding: 1.25rem 1.75rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
   margin-top: 2rem;
@@ -1503,7 +1567,7 @@ textarea.form-control::placeholder {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 0.6rem;
+  gap: 0.6rem 0.65rem;
   flex: 1 1 auto;
   min-width: 0;
 }
@@ -1519,10 +1583,16 @@ textarea.form-control::placeholder {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.45rem;
   transition: all var(--transition-fast);
   cursor: pointer;
   white-space: nowrap;
+}
+
+.btn-blog-pill i {
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-blog-pill:hover {
@@ -1549,6 +1619,8 @@ textarea.form-control::placeholder {
   min-width: 260px;
   flex: 0 0 280px;
   margin-left: auto;
+  margin-top: 2px;
+}
 }
 
 .blog-search-box i {
@@ -1735,6 +1807,16 @@ textarea.form-control::placeholder {
   font-weight: 700;
 }
 
+.blog-author-avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--secondary);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
 .blog-author-name {
   font-size: 0.82rem;
   font-weight: 600;
@@ -1802,6 +1884,44 @@ textarea.form-control::placeholder {
   position: absolute;
   top: 12px;
   right: 12px;
+}
+
+/* ==========================================================================
+   OFFERS PAGE (COMPACT COUNTDOWN TIMER & HIGHLIGHTS)
+   ========================================================================== */
+
+.offers-countdown-pill {
+  background: rgba(14, 15, 18, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(197, 160, 89, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.offers-countdown-digit {
+  font-family: var(--font-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffd700;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+
+.offers-countdown-unit {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 2px;
+}
+
+.offers-countdown-sep {
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
 .offer-coupon-box {

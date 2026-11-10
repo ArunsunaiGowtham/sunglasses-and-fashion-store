@@ -113,7 +113,7 @@
               <p class="blog-excerpt">${article.shortDesc}</p>
               <div class="blog-card-footer">
                 <div class="blog-author-info">
-                  <div class="blog-author-avatar">${article.author.charAt(0)}</div>
+                  <img src="${article.authorAvatar || 'images/avatars/avatar-1.jpg'}" alt="${article.author}" class="blog-author-avatar-img" loading="lazy">
                   <span class="blog-author-name">${article.author}</span>
                 </div>
                 <button type="button" class="btn-read-article" onclick="openArticleReader('${article.id}')">
@@ -152,7 +152,7 @@
 
     if (detailMeta) {
       detailMeta.innerHTML = `
-        <span class="d-inline-flex align-items-center"><i class="bi bi-person me-2 fs-6"></i>${article.author}, ${article.authorRole}</span>
+        <span class="d-inline-flex align-items-center"><img src="${article.authorAvatar || 'images/avatars/avatar-1.jpg'}" alt="${article.author}" class="blog-author-avatar-img me-2" style="width: 26px; height: 26px;">${article.author}, ${article.authorRole}</span>
         <span class="d-inline-flex align-items-center"><i class="bi bi-calendar3 me-2 fs-6"></i>${article.date}</span>
         <span class="d-inline-flex align-items-center"><i class="bi bi-clock me-2 fs-6"></i>${article.readTime}</span>
       `;
