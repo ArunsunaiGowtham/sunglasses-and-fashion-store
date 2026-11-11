@@ -2240,18 +2240,36 @@ textarea.form-control::placeholder {
 }
 
 .footer-newsletter-input {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #ffffff;
+  color: #ffffff !important;
+  caret-color: #ffffff;
   border-radius: var(--radius-sm);
   padding: 0.75rem 1rem;
 }
 
+.footer-newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+  opacity: 1 !important;
+}
+
 .footer-newsletter-input:focus {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12) !important;
   border-color: var(--secondary);
-  color: #ffffff;
+  color: #ffffff !important;
+  caret-color: #ffffff;
   box-shadow: none;
+}
+
+.footer-newsletter-input:-webkit-autofill,
+.footer-newsletter-input:-webkit-autofill:hover,
+.footer-newsletter-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 1000px #1e2128 inset !important;
+  box-shadow: 0 0 0 1000px #1e2128 inset !important;
+  border-color: rgba(255, 255, 255, 0.25);
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .footer-bottom {
@@ -2351,7 +2369,7 @@ textarea.form-control::placeholder {
 }
 
 .custom-toast {
-  background: var(--primary);
+  background: #18181b;
   color: #ffffff;
   padding: 1rem 1.25rem;
   border-radius: var(--radius-md);
@@ -2362,6 +2380,10 @@ textarea.form-control::placeholder {
   min-width: 300px;
   border-left: 4px solid var(--secondary);
   animation: slideInToast 0.3s ease forwards;
+}
+
+.custom-toast i.text-secondary {
+  color: var(--secondary) !important;
 }
 
 @keyframes slideInToast {
