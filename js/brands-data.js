@@ -103,7 +103,7 @@ const BRANDS_DATA = [
     tagline: "Drive Your Passion",
     desc: "Born on the legendary Carrera Panamericana race track, fusing bold racing spirit into browline frames and breathable trucker caps.",
     specialties: ["Retro Browlines", "A-Frame Trucker Caps", "Sport-Lifestyle Shades"],
-    productCount: 2,
+    productCount: 3,
     link: "shop.html?brand=Carrera"
   }
 ];

@@ -332,6 +332,45 @@ const PRODUCTS_DATA = [
     },
     inStock: true
   },
+  {
+    id: "sg-9",
+    name: "Grand Prix Navigator Polarized Shades",
+    category: "sunglasses",
+    subCategory: "Navigator",
+    gender: "unisex",
+    brand: "Carrera",
+    price: 195.0,
+    originalPrice: 235.0,
+    discount: "17% OFF",
+    rating: 4.8,
+    reviewsCount: 89,
+    isNew: false,
+    isTrending: false,
+    isBestSeller: false,
+    isFeatured: false,
+    image: "images/products/sg-9.jpg",
+    gallery: [
+      "images/products/sg-9.jpg"
+    ],
+    colors: [
+      { name: "Amber Tortoise / Gold Bridge", code: "#8d5b2c" },
+      { name: "Matte Carbon / Polar Smoke", code: "#212121" }
+    ],
+    shortDesc: "Architectural square navigator sunglasses pairing warm amber-tortoise acetate rims with a brushed gold double bridge and UV400 green-smoke lenses.",
+    description: "Engineered for coastal grand touring and refined urban wear, the Grand Prix Navigator combines sculpted translucent amber-tortoise cellulose acetate with a brushed titanium double brow bar and high-contrast polarized optics.",
+    specs: {
+      "Frame Type": "Full-Rim Double-Bridge Square Navigator",
+      "Frame Material": "Italian Amber-Tortoise Acetate & Titanium",
+      "Lens Type": "HD Polarized Green-Smoke Mineral Optics",
+      "UV Protection": "UV400 / 100% UVA & UVB Filtration",
+      "Lens Width": "56 mm",
+      "Bridge Width": "17 mm",
+      "Temple Length": "145 mm",
+      "Weight": "27.4 grams",
+      "Face Shape Match": "Oval, Round, Diamond, Oblong"
+    },
+    inStock: true
+  },
 
   // ================= BELTS =================
   {
