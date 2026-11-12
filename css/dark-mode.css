@@ -255,8 +255,13 @@
 }
 
 [data-theme="dark"] .site-footer .navbar-brand,
-[data-theme="dark"] .site-footer .navbar-brand span {
+[data-theme="dark"] .site-footer .navbar-brand span:not(.text-secondary) {
   color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar-brand .text-secondary,
+[data-theme="dark"] .site-footer .navbar-brand .text-secondary {
+  color: var(--secondary) !important;
 }
 
 [data-theme="dark"] .site-footer .brand-icon-box {

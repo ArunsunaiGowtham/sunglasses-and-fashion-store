@@ -440,11 +440,15 @@ textarea.form-control::placeholder {
   letter-spacing: -0.01em;
 }
 
+.navbar-brand .text-secondary {
+  color: var(--secondary) !important;
+}
+
 .brand-icon-box {
   width: 36px;
   height: 36px;
-  background: var(--primary);
-  color: var(--secondary);
+  background: var(--secondary);
+  color: #0b0c0e;
   border-radius: 8px;
   display: flex;
   align-items: center;
