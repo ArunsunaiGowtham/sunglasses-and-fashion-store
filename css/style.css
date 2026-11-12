@@ -1631,7 +1631,6 @@ textarea.form-control::placeholder {
   margin-left: auto;
   margin-top: 2px;
 }
-}
 
 .blog-search-box i {
   position: absolute;
@@ -2348,9 +2347,11 @@ textarea.form-control::placeholder {
   transition: all var(--transition-fast);
 }
 
-.social-icon-btn:hover {
-  background: var(--secondary);
-  color: #ffffff;
+.social-icon-btn:hover,
+.social-icon-btn.bg-dark:hover {
+  background: var(--secondary) !important;
+  background-color: var(--secondary) !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
 }
 
@@ -2904,4 +2905,35 @@ textarea.form-control::placeholder {
   padding: 1.25rem;
   vertical-align: middle;
   border-bottom: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   LIGHT MODE CONTRAST ON DARK SURFACES (COMING SOON & HERO BANNERS)
+   ========================================================================== */
+
+.coming-soon-page .navbar-brand {
+  color: #ffffff !important;
+}
+
+.coming-soon-page .navbar-brand .text-secondary {
+  color: #e5c158 !important;
+}
+
+.coming-soon-page .brand-icon-box {
+  border: 1px solid rgba(229, 193, 88, 0.35);
+}
+
+.coming-soon-page h1 {
+  color: #ffffff !important;
+}
+
+.btn-luxury-outline.text-white:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #0d0e11 !important;
+}
+
+[data-theme="light"] .hero-actions .btn-luxury,
+[data-theme="light"] .hero-content .btn-luxury {
+  border-color: rgba(255, 255, 255, 0.28);
 }

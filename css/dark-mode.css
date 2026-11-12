@@ -758,3 +758,66 @@
   background: #0b0c0e !important;
   color: #ffffff !important;
 }
+
+/* ==========================================================================
+   ADDITIONAL DARK MODE CONTRAST & INTERACTIVE FIXES
+   ========================================================================== */
+
+[data-theme="dark"] .btn-gold {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: #0d0e11;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .btn-gold:hover,
+[data-theme="dark"] .btn-gold:focus-visible {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+  color: #0d0e11;
+}
+
+[data-theme="dark"] .nav-badge-count,
+[data-theme="dark"] .checkout-step-badge,
+[data-theme="dark"] .checkout-qty-badge {
+  background-color: var(--secondary);
+  color: #0d0e11;
+}
+
+[data-theme="dark"] .checkout-qty-badge {
+  border-color: var(--bg-surface);
+}
+
+[data-theme="dark"] .btn-luxury-outline.text-white:hover,
+[data-theme="dark"] .btn-luxury-outline.text-white:focus-visible {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+}
+
+[data-theme="dark"] .filter-chip:hover {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #0d0e11;
+}
+
+[data-theme="dark"] .social-icon-btn:hover,
+[data-theme="dark"] .social-icon-btn:focus-visible {
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary) !important;
+  color: #0d0e11 !important;
+}
+
+[data-theme="dark"] .bg-subtle .btn-dark {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: #0d0e11;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .bg-subtle .btn-dark:hover,
+[data-theme="dark"] .bg-subtle .btn-dark:focus-visible {
+  background-color: var(--secondary-hover);
+  border-color: var(--secondary-hover);
+  color: #0d0e11;
+}

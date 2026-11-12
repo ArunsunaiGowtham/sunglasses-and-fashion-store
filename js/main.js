@@ -478,6 +478,11 @@
     }
 
     if (emptyEl) emptyEl.classList.add("d-none");
+    if (typeof PRODUCTS_DATA === "undefined") {
+      listEl.innerHTML = "";
+      if (emptyEl) emptyEl.classList.remove("d-none");
+      return;
+    }
 
     let html = "";
     wishlist.forEach((id) => {
