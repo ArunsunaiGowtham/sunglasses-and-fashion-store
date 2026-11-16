@@ -143,62 +143,36 @@
       const menu = item.querySelector(".dropdown-menu");
       if (!toggle || !menu) return;
 
-      let isHovered = false;
-
-      // Desktop hover interaction
+      // Desktop hover interaction (viewport >= 992px)
       item.addEventListener("mouseenter", function () {
         if (window.innerWidth >= 992) {
-          isHovered = true;
-          menu.classList.add("show");
-          toggle.setAttribute("aria-expanded", "true");
+          if (typeof bootstrap !== "undefined" && bootstrap.Dropdown) {
+            bootstrap.Dropdown.getOrCreateInstance(toggle).show();
+          } else {
+            menu.classList.add("show");
+            toggle.classList.add("show");
+            toggle.setAttribute("aria-expanded", "true");
+          }
         }
       });
 
       item.addEventListener("mouseleave", function () {
         if (window.innerWidth >= 992) {
-          isHovered = false;
-          menu.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      });
-
-      // Handle click/tap on the dropdown toggle button/link
-      toggle.addEventListener("click", function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        // If already hovered open on desktop, ensure it remains open
-        if (window.innerWidth >= 992 && isHovered && menu.classList.contains("show")) {
-          return;
-        }
-
-        const isShown = menu.classList.contains("show");
-        
-        // Close other dropdowns
-        document.querySelectorAll(".dropdown-menu.show").forEach((m) => {
-          if (m !== menu) m.classList.remove("show");
-        });
-        document.querySelectorAll(".dropdown-toggle[aria-expanded='true']").forEach((t) => {
-          if (t !== toggle) t.setAttribute("aria-expanded", "false");
-        });
-
-        if (isShown) {
-          menu.classList.remove("show");
-          toggle.setAttribute("aria-expanded", "false");
-        } else {
-          menu.classList.add("show");
-          toggle.setAttribute("aria-expanded", "true");
+          if (typeof bootstrap !== "undefined" && bootstrap.Dropdown) {
+            const inst = bootstrap.Dropdown.getInstance(toggle);
+            if (inst) inst.hide();
+          } else {
+            menu.classList.remove("show");
+            toggle.classList.remove("show");
+            toggle.setAttribute("aria-expanded", "false");
+          }
         }
       });
     });
 
-    // Close open dropdowns when clicking outside
-    document.addEventListener("click", function (e) {
-      if (!e.target.closest(".nav-item.dropdown")) {
-        document.querySelectorAll(".dropdown-menu.show").forEach((m) => m.classList.remove("show"));
-        document.querySelectorAll(".dropdown-toggle[aria-expanded='true']").forEach((t) => t.setAttribute("aria-expanded", "false"));
-      }
-    });
+    // Note: On mobile (<992px) and click/tap events, Bootstrap 5's native data-api
+    // handles [data-bs-toggle="dropdown"] with full accessibility, Popper alignment,
+    // and outside-click dismissal without conflicting event cancellation.
   }
 
   // ==========================================
